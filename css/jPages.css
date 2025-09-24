@@ -1,0 +1,201 @@
+
+.holder {
+  margin-bottom: 10px;
+  clear: both;
+  text-align:center;
+}
+
+.holder a {
+    background: no-repeat;
+    margin-right: 0;
+    border: 1px solid rgb(220, 157, 54);
+    color: rgb(220, 157, 54);
+    cursor: pointer;
+    margin: 0 5px;
+    height: 33px;
+    width: 35px;
+    display: inline-block;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.holder a:hover {color: #fff;background: rgb(220, 157, 54);text-align: center;}
+
+.holder a.jp-current, a.jp-current:hover {
+  color: #fff;
+  background: rgb(220, 157, 54);
+  text-align: center;
+}
+
+
+
+.holder a.jp-disabled, a.jp-disabled:hover {
+color: #bbb;
+}
+
+.holder a.jp-current, a.jp-current:hover,
+.holder a.jp-disabled, a.jp-disabled:hover {
+	cursor: default; 
+}
+
+.holder span {
+    margin: 0 5px;
+    display: inline-block;
+    line-height: 33px;
+    vertical-align: text-bottom;
+}
+
+
+
+.holder a.jp-previous {
+    text-indent: -9999px;
+    border: none;
+	position:relative
+}
+.holder a.jp-previous:hover{
+	background:none
+}
+.holder a.jp-previous:after {
+    font: normal normal normal 17px/1 FontAwesome;
+    content: "\f054";
+    color: #dc9d36;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    text-indent: 0;
+    line-height: 33px;
+}
+
+.holder a.jp-next {
+    text-indent: -9999px;
+    border: none;
+	position:relative
+}
+.holder a.jp-next:hover{
+	background:none
+}
+
+.holder a.jp-next:after {
+    font: normal normal normal 17px/1 FontAwesome;
+    content: "\f053";
+    color: #dc9d36;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    text-indent: 0;
+    line-height: 33px;
+}
+
+
+
+
+
+
+.holder_pager{
+  margin-bottom: 10px;
+  clear: both;
+  text-align:center;
+}
+
+.holder_pager a{
+    background: no-repeat;
+    margin-right: 0;
+    border: 1px solid rgb(220, 157, 54);
+    color: rgb(220, 157, 54);
+    cursor: pointer;
+    margin: 0 5px;
+    height: 33px;
+    width: 35px;
+    display: inline-block;
+    line-height: 28px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.holder_pager a:hover{color: #fff;background: rgb(220, 157, 54);text-align: center;}
+
+.holder_pager a.jp-current, a.jp-current:hover {
+  color: #fff;
+  background: rgb(220, 157, 54);
+  text-align: center;
+}
+
+
+
+.holder_pager a.jp-disabled, a.jp-disabled:hover {
+color: #bbb;
+}
+
+.holder_pager a.jp-current, a.jp-current:hover,
+.holder_pager a.jp-disabled, a.jp-disabled:hover {
+	cursor: default; 
+}
+
+.holder_pager span {
+    margin: 0 5px;
+    display: inline-block;
+    line-height: 33px;
+    vertical-align: text-bottom;
+}
+
+.holder_pager a.jp-previous {
+    text-indent: -9999px;
+    border: none;
+	position:relative
+}
+.holder_pager a.jp-previous:hover{
+	background:none
+}
+.holder_pager a.jp-previous:after {
+    font: normal normal normal 17px/1 FontAwesome;
+    content: "\f054";
+    color: #dc9d36;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    text-indent: 0;
+    line-height: 33px;
+}
+
+.holder_pager a.jp-next {
+    text-indent: -9999px;
+    border: none;
+	position:relative
+}
+.holder_pager a.jp-next:hover{
+	background:none
+}
+
+.holder_pager a.jp-next:after {
+    font: normal normal normal 17px/1 FontAwesome;
+    content: "\f053";
+    color: #dc9d36;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    text-indent: 0;
+    line-height: 33px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
