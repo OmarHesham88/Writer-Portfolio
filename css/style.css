@@ -269,7 +269,7 @@ header {
 .main-menu a {
   color: #f0f1c7;
   padding: 0 12px;
-  line-height: 40px;
+  line-height: 36px;
   position: relative;
   display: inline-block;
   font-family: "med";
@@ -343,7 +343,6 @@ header nav {
   font-family: "med";
   position: relative;
   text-align: center;
-  margin-top: 62px;
   font-size: 18px;
   color: #f0f1c7;
 }
