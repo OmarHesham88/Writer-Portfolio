@@ -3042,6 +3042,15 @@ img.pop-img {
 
 @media (max-width: 768px) {
   .logo img {
-    height: 320px !important;
+    height: 250px !important;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 470px) {
+  .logo img {
+    height: 180px !important;
+  }
+  header {
+    min-height: 350px !important;
   }
 }
