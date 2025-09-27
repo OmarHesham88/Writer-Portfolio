@@ -156,3 +156,21 @@ $(".n-link").click(function () {
 
 document.getElementById("defaultOpen").click();
 /* when document is ready */
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".search-box").forEach((box) => {
+    const btn = box.querySelector("button");
+    const input = box.querySelector("input");
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // stop form submit
+      if (input.style.display === "block") {
+        input.style.display = "none";
+        input.value = "";
+      } else {
+        input.style.display = "block";
+        input.focus();
+      }
+    });
+  });
+});
