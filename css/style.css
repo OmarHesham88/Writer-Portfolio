@@ -369,9 +369,10 @@ header nav {
 .colored-btn {
   width: 198px;
   display: block;
-  color: #1a1919;
+  color: white;
   font-size: 18px;
-  background: url(../images/btn-bg.png) no-repeat 100% 47% / cover;
+  /* background: url(../images/btn-bg.png) no-repeat 100% 47% / cover; */
+  background-color: black;
   text-align: center;
   border-radius: 25px;
   height: 40px;
@@ -2883,7 +2884,7 @@ img.pop-img {
   width: 138px;
   border: none;
   /* background: url(../images/button.png) 0 0 / cover; */
-  background-color: #424242;
+  background-color: black;
 
   border-radius: 25px;
   padding: 4px 10px 30px;
@@ -2893,11 +2894,11 @@ img.pop-img {
 
 .mix-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة بالضبط */
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  justify-content: center; /* يحافظ على تمركز الشبكة */
-  max-width: 900px; /* عرض أقصى للشبكة */
-  margin: 0 auto; /* يتمركز في منتصف الصفحة */
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .vd {
@@ -2970,12 +2971,7 @@ img.pop-img {
 .menu-size {
   display: flow-root;
 }
-/* خلي البلوك الكبير ياخذ عرض الشبكة كله */
-.mix-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
+
 .mix-container .fixed-size {
   grid-column: 1 / -1;
 }
@@ -2986,7 +2982,7 @@ img.pop-img {
 }
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
   gap: 20px; /* space between cards */
   list-style: none;
   padding: 0;
@@ -3065,16 +3061,6 @@ img.pop-img {
   header {
     min-height: 350px !important;
   }
-}
-
-/* responsive 3 per row on desktop, auto down to 2/1 on smaller screens */
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* compact, image-first card */
