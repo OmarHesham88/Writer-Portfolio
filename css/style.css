@@ -350,6 +350,7 @@ header nav {
 .logo img {
   margin: 0 auto 12px;
   display: block;
+  margin-top: 20px;
 }
 
 .logo span {
