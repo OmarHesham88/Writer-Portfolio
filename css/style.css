@@ -2873,7 +2873,7 @@ img.pop-img {
   width: 138px;
   border: none;
   background: url(../images/button.png) 0 0 / cover;
-  margin-left: 37px;
+
   border-radius: 25px;
   padding: 4px 10px 30px;
   margin-bottom: 20px;
@@ -2975,7 +2975,7 @@ img.pop-img {
 }
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px; /* space between cards */
   list-style: none;
   padding: 0;
@@ -3038,4 +3038,10 @@ img.pop-img {
 
 .download-btn:hover {
   background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 320px !important;
+  }
 }
