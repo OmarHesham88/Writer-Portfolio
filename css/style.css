@@ -346,6 +346,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(-80px);
 }
 
 .logo {
