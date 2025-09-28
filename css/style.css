@@ -569,6 +569,7 @@ button {
 }
 
 .about {
+  display: flex;
   width: 1175px;
   margin-top: 35px;
   margin-left: auto;
@@ -577,13 +578,16 @@ button {
 
 .about img {
   width: 635px;
-  float: right;
   margin-left: 25px;
+}
+@media (max-width: 970px) {
+  .about img {
+    width: 420px !important;
+  }
 }
 
 .family {
-  float: right;
-  width: 514px;
+  max-width: 550px;
 }
 
 .family h2 {
@@ -605,6 +609,35 @@ button {
   font-size: 24px;
   margin-bottom: 20px;
   line-height: 30px;
+}
+
+.img-wrapper {
+  position: relative;
+  display: flex;
+  max-width: 680px;
+}
+
+.main-img {
+  display: block;
+  width: 100%; /* image scales with container */
+  height: auto;
+}
+
+/* logo overlay stays centered */
+.overlay-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-34%, -60%) scale(0.6);
+  width: 80px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* show on scroll */
+.overlay-img.visible {
+  opacity: 1;
 }
 
 .gallery .more span {
@@ -2965,9 +2998,6 @@ img.pop-img {
   color: #fff;
 }
 
-.about {
-  display: flow-root;
-}
 .menu-size {
   display: flow-root;
 }
@@ -3065,64 +3095,74 @@ img.pop-img {
 
 /* compact, image-first card */
 .book-card {
-  position: relative;
   border-radius: 16px;
   overflow: hidden;
-  background: #111;
+  background: #fff; /* white card now */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  /* keep height tight and consistent */
-  aspect-ratio: 10 / 10; /* ~less height; adjust to taste: 4/3, 3/2, etc. */
+  display: flex;
+  flex-direction: column;
 }
 .book-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
 }
 
-/* background image */
+/* image on top */
 .book-img {
-  position: absolute;
-  inset: 0;
+  width: 100%;
+  height: 200px; /* fixed height */
   background-size: cover;
   background-position: center;
-  filter: brightness(0.9);
+  filter: brightness(0.95);
 }
 
-/* title (top overlay) */
+/* title ABOVE image */
 .book-title {
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  margin: 0;
-  padding: 10px 14px 18px;
+  margin: 12px 14px 0;
   font-size: 1rem;
   font-weight: 700;
+  color: #333;
   line-height: 1.5;
-  color: #fff;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  position: relative;
 }
 
-/* bottom bar: date + download */
-.book-meta {
+/* underline effect on hover */
+.book-title::after {
+  content: "";
   position: absolute;
-  inset-inline: 0;
-  bottom: 0;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #c27006, #f0c27b);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.book-card:hover .book-title::after {
+  transform: scaleX(1);
+}
+
+/* meta BELOW image */
+.book-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 14px 14px;
+  color: #333;
+  margin-top: auto;
+  background: #fff;
   gap: 12px;
-  padding: 12px 14px 10px;
-  color: #fff;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
 }
 
 /* date */
 .book-date {
   font-size: 0.9rem;
-  color: #f1f1f1;
+  color: #555;
 }
 .book-date span {
-  opacity: 0.8;
+  opacity: 0.7;
   margin-inline-start: 6px;
 }
 
@@ -3130,13 +3170,13 @@ img.pop-img {
 .download-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: #c27006;
   color: #fff;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 9999px;
   box-shadow: 0 4px 10px rgba(194, 112, 6, 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
@@ -3145,26 +3185,4 @@ img.pop-img {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(194, 112, 6, 0.45);
   background: #a55d04;
-}
-
-/* optional: if your page isn’t already RTL */
-#book-list {
-  direction: rtl;
-}
-.book-title::after {
-  content: "";
-  position: absolute;
-  inset-inline: 14px;
-  bottom: 10px;
-  height: 3px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, #c27006, #f0c27b);
-  transform: scaleX(0);
-  transform-origin: inline-end;
-  transition: transform 0.35s ease;
-  opacity: 0.9;
-}
-.book-card:hover .book-title::after {
-  transform: scaleX(1);
-  transform-origin: inline-start;
 }

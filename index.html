@@ -321,11 +321,13 @@ and open the template in the editor.
         </section>
 
         <!--start about-->
+        <h2 class="decor-title">السيرة الذاتية</h2>
         <div class="about">
-          <h2 class="decor-title">السيرة الذاتية</h2>
-          <img src="images/side.png" />
+          <div class="img-wrapper">
+            <img src="images/side.png" class="main-img" />
+            <img src="images/logo.png" class="overlay-img" />
+          </div>
           <div class="family">
-            <!-- <h2 class="decor-title">السيرة الذاتية</h2> -->
             <p>
               نتسب أسرة آل بشر الى قبيلة آل مغيرة من بني لام من طيء و طيء قبيلة
               مشهورة من كهلان بن قحطان . وبني لام من القبائل العربية المعروفة
@@ -340,6 +342,7 @@ and open the template in the editor.
             <a href="" class="colored-btn btn">إقرأ المزيد </a>
           </div>
         </div>
+
         <!--end about-->
 
         <!-- SECTION 2 -->
@@ -615,6 +618,24 @@ and open the template in the editor.
             }
           });
         });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const logo = document.querySelector(".overlay-img");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                logo.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.5 }
+        ); // 50% in view
+
+        observer.observe(logo);
       });
     </script>
   </body>
