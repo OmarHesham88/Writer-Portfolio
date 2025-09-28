@@ -133,7 +133,8 @@ and open the template in the editor.
 
                   <div class="book-meta">
                     <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span> 30 يناير 2017
+                      <span>تاريخ الإصدار:</span><br />
+                      30 يناير 2017
                     </time>
 
                     <a
@@ -616,6 +617,31 @@ and open the template in the editor.
             } else {
               input.value = "";
             }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const headerNav = document.querySelector("header nav");
+
+        document.querySelectorAll(".search-box").forEach((box) => {
+          const btn = box.querySelector("button");
+          const input = box.querySelector("input");
+
+          // click on button OR box
+          [btn, box].forEach((el) => {
+            el.addEventListener("click", (e) => {
+              e.preventDefault();
+              box.classList.toggle("active");
+
+              // move nav when active
+              if (box.classList.contains("active")) {
+                input.focus();
+                headerNav.style.transform = "translateX(0)";
+              } else {
+                input.value = "";
+                headerNav.style.transform = "translateX(-80px)";
+              }
+            });
           });
         });
       });
