@@ -3188,3 +3188,7 @@ img.pop-img {
   box-shadow: 0 6px 14px rgba(194, 112, 6, 0.45);
   background: #a55d04;
 }
+
+.decor-image {
+  transform: translateY(7px);
+}
