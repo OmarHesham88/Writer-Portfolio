@@ -2734,6 +2734,10 @@ img.pop-img {
 .ft-legal li:hover {
   text-decoration: underline;
 }
+.site-footer li:hover {
+  transform: scale(1.15);
+  transition-duration: 0.3s;
+}
 .site-footer .ft-copy {
   margin: 0;
 }
