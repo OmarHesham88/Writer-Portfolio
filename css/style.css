@@ -2734,7 +2734,6 @@ img.pop-img {
 .ft-legal li a {
   font: 400 16px / 1.75 system-ui, -apple-system, "Segoe UI", Roboto,
     "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
-  text-decoration: underline;
 }
 .site-footer i:hover {
   transform: scale(1.15);
@@ -2742,6 +2741,7 @@ img.pop-img {
 }
 .site-footer .ft-copy {
   margin: 0;
+  font-size: smaller;
 }
 
 /* Responsive */
