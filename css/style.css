@@ -2731,6 +2731,9 @@ img.pop-img {
   padding: 0;
   font-family: light !important;
 }
+.ft-legal li:hover {
+  text-decoration: underline;
+}
 .site-footer .ft-copy {
   margin: 0;
 }
@@ -3149,6 +3152,7 @@ img.pop-img {
   transition: color 0.3s;
 }
 .ft-social i {
+  font-size: 30px;
   color: white !important;
 }
 .ft-social li a:hover {
