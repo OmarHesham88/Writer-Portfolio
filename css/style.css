@@ -3255,28 +3255,28 @@ img.pop-img {
   }
 }
 
-.family {
+.about .family {
   max-width: 700px;
-  margin: 80px auto;
+  margin: 20px auto;
   text-align: right;
   direction: rtl;
   font-family: light !important;
 }
 
-.family h2 {
+.about .family h2 {
   font-size: 56px;
   font-weight: 800;
   color: #1c1c3b;
   line-height: 1.2;
 }
 
-.family h2 .highlight {
+.about .family h2 .highlight {
   position: relative;
   display: inline-block;
   color: #1c1c3b;
 }
 
-.family h2 .highlight::after {
+.about .family h2 .highlight::after {
   content: "";
   position: absolute;
   bottom: 1px;
@@ -3288,7 +3288,7 @@ img.pop-img {
   border-radius: 4px;
 }
 
-.family p {
+.about .family p {
   color: #555;
   font-size: 28px;
   line-height: 1.7;
