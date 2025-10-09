@@ -72,8 +72,9 @@ and open the template in the editor.
             <div style="width: 180px">
               <div class="search-box">
                 <button type="button"><i class="fas fa-search"></i></button>
-                <input type="text" placeholder="ابحث هنا..." />
+                <input type="text" id="searchInput" placeholder="ابحث هنا..." />
               </div>
+              <ul id="resultsList"></ul>
             </div>
           </nav>
 
@@ -709,6 +710,42 @@ and open the template in the editor.
             });
           });
         });
+      });
+
+      //
+      //
+      //
+
+      const items = [
+        "علي",
+        "عمر",
+        "أحمد",
+        "محمد",
+        "هشام",
+        "محمود",
+        "Omar, Ahmed, Osama",
+      ];
+
+      const searchInput = document.getElementById("searchInput");
+      const resultsList = document.getElementById("resultsList");
+
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        resultsList.innerHTML = "";
+
+        if (query === "") return;
+
+        const filtered = items.filter((item) =>
+          item.toLowerCase().includes(query)
+        );
+
+        filtered.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          resultsList.appendChild(li);
+        });
+        console.log("I'm Working");
+        console.log(resultsList);
       });
     </script>
     <script>
