@@ -2995,6 +2995,9 @@ img.pop-img {
   .family .colored-btn {
     margin-left: auto !important;
   }
+  .about .family h2 {
+    font-size: 36px !important;
+  }
 }
 @media (max-width: 768px) {
   .logo img {
