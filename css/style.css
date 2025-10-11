@@ -2399,7 +2399,7 @@ img.pop-img {
   right: 0;
   top: 0;
   position: absolute;
-  background-color: rgba(170, 169, 102, 0.9);
+  background-color: #c27006;
   border-radius: 50%;
   z-index: 18;
   overflow: hidden;
@@ -2458,8 +2458,8 @@ img.pop-img {
 
 .oppenned .sub-menu {
   opacity: 1;
-  height: 560px;
-  width: 453px;
+  height: 530px;
+  width: 383px;
 }
 .oppenned span:nth-child(2) {
   overflow: visible;
@@ -2477,12 +2477,12 @@ img.pop-img {
   z-index: 20 !important;
 }
 .oppenned span:nth-child(2) {
-  height: 560px;
-  width: 433px;
+  height: 545px;
+  width: 405px;
   right: -160px;
   top: -160px;
   border-radius: 50%;
-  background-color: rgba(170, 169, 102, 0.9);
+  background-color: #c27006;
   z-index: 18;
 }
 .oppenned span:nth-child(3) {
@@ -3309,29 +3309,28 @@ footer {
 
 .search-box button:hover {
   background: linear-gradient(#c27006, #ffb100);
- }
-
+}
 
 .results-list {
   list-style: none;
   padding: 0;
   margin: 8px 0 0 0;
-  
-  position: absolute; 
-  z-index: 1000; 
+
+  position: absolute;
+  z-index: 1000;
   width: 100%;
 
   background: #ffffff;
-  border: 1px solid #e0e0e0; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px); 
+  transform: translateY(-10px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 
-  max-height: 500px; 
+  max-height: 500px;
 }
 
 .results-list.show {
@@ -3341,13 +3340,13 @@ footer {
 }
 
 .results-list li a {
-  display: block; 
-  padding: 12px 16px; 
-  color: #333; 
-  text-decoration: none; 
+  display: block;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
   font-size: 14px;
   border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.2s ease; 
+  transition: background-color 0.2s ease;
 }
 
 .results-list li:last-child a {
@@ -3356,15 +3355,14 @@ footer {
 
 .results-list li a:hover,
 .results-list li a:focus {
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
   color: #000;
 }
 
 .results-list li a strong {
-  color: #007bff; 
+  color: #007bff;
   font-weight: 600;
 }
-
 
 /* --- Search Modal Styles --- */
 .search-modal {
@@ -3401,7 +3399,7 @@ footer {
 }
 
 .search-modal.show .search-modal-content {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .search-modal-close {
