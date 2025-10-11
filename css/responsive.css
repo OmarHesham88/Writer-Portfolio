@@ -362,7 +362,12 @@
   .fixed-size {
     width: 545px;
   }
-
+  .site-footer .ft-bottom {
+    justify-content: center;
+  }
+  .about-name-part {
+    white-space: nowrap;
+  }
   .copy-cont {
     width: 500px;
   }
@@ -509,6 +514,9 @@
   .menu-size,
   .fixed-size {
     width: 450px;
+  }
+  .ft-copy {
+    text-align: center;
   }
   .copy-cont {
     width: 400px;
@@ -728,6 +736,24 @@
   }
 }
 
+@media only screen and (max-width: 380px) {
+  .vd {
+    max-width: 250px;
+    margin: auto;
+  }
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    inset-block-end: 2.25rem;
+    inset-inline-end: 1.25rem;
+  }
+  .back-to-top .chev {
+    height: 60%;
+  }
+  .ft-copy {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=responsive.css.map */

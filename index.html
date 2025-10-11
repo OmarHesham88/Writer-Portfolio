@@ -77,14 +77,22 @@ and open the template in the editor.
             <a href="family.html">صوتيات</a>
 
             <!-- Search Bar -->
-            <div class="search-component" style="width: 180px; position: relative; z-index: 1001;">
-                   <div class="search-box">
-        <button type="button"><i class="fas fa-search"></i></button>
-        <!-- CHANGE: id="searchInput" becomes class="search-input" -->
-        <input type="text" class="search-input" placeholder="ابحث هنا..." autocomplete="off" />
-    </div>
-    <!-- CHANGE: id="resultsList" becomes class="results-list" -->
-    <ul class="results-list"></ul>
+            <div
+              class="search-component"
+              style="width: 180px; position: relative; z-index: 1001"
+            >
+              <div class="search-box">
+                <button type="button"><i class="fas fa-search"></i></button>
+                <!-- CHANGE: id="searchInput" becomes class="search-input" -->
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="ابحث هنا..."
+                  autocomplete="off"
+                />
+              </div>
+              <!-- CHANGE: id="resultsList" becomes class="results-list" -->
+              <ul class="results-list"></ul>
             </div>
           </nav>
 
@@ -105,7 +113,7 @@ and open the template in the editor.
           <div class="family">
             <h2>
               <span>الأديب، و الكاتب</span>
-              <span class="highlight" style="margin-top: 10px"
+              <span class="highlight about-name-part" style="margin-top: 10px"
                 >عبدالقدوس الأنصارى</span
               >
             </h2>
@@ -610,11 +618,25 @@ and open the template in the editor.
     <!--end wrapper-->
 
     <!-- Search Modal -->
-    <div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchModalTitle">
+    <div
+      id="searchModal"
+      class="search-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="searchModalTitle"
+    >
       <div class="search-modal-content">
-        <button class="search-modal-close" aria-label="إغلاق البحث">&times;</button>
+        <button class="search-modal-close" aria-label="إغلاق البحث">
+          &times;
+        </button>
         <h3 id="searchModalTitle">ابحث في الموقع</h3>
-        <input type="text" id="modalSearchInput" class="modal-search-input" placeholder="اكتب هنا للبحث..." autocomplete="off" />
+        <input
+          type="text"
+          id="modalSearchInput"
+          class="modal-search-input"
+          placeholder="اكتب هنا للبحث..."
+          autocomplete="off"
+        />
         <ul id="modalResultsList" class="modal-results-list"></ul>
       </div>
     </div>
@@ -661,7 +683,7 @@ and open the template in the editor.
           mixer.filter(buttons[0].dataset.filter);
         }
       });
-      
+
       // Desktop Search Bar Toggle
       document.addEventListener("DOMContentLoaded", () => {
         const headerNav = document.querySelector("header nav");
@@ -692,133 +714,161 @@ and open the template in the editor.
         });
       });
 
-
       // --- Improved Live Search Logic ---
       const initializeSearchComponent = (component) => {
-          const searchInput = component.querySelector('.search-input');
-          const resultsList = component.querySelector('.results-list');
-          
-          // Hardcoded items to search. In a real app, this would come from a server.
-          const items = ["علي", "عمر", "أحمد", "محمد", "هشام", "محمود", "عبدالقدوس الأنصارى", "مجلة المنهل"];
+        const searchInput = component.querySelector(".search-input");
+        const resultsList = component.querySelector(".results-list");
 
-          // Make sure we found the necessary elements before proceeding
-          if (!searchInput || !resultsList) {
-              return;
+        // Hardcoded items to search. In a real app, this would come from a server.
+        const items = [
+          "علي",
+          "عمر",
+          "أحمد",
+          "محمد",
+          "هشام",
+          "محمود",
+          "عبدالقدوس الأنصارى",
+          "مجلة المنهل",
+        ];
+
+        // Make sure we found the necessary elements before proceeding
+        if (!searchInput || !resultsList) {
+          return;
+        }
+
+        searchInput.addEventListener("input", function () {
+          const query = this.value.trim().toLowerCase();
+          resultsList.innerHTML = ""; // Clear previous results
+
+          if (query === "") {
+            resultsList.classList.remove("show");
+            return;
           }
 
-          searchInput.addEventListener("input", function () {
-              const query = this.value.trim().toLowerCase();
-              resultsList.innerHTML = ""; // Clear previous results
+          const filteredItems = items.filter((item) =>
+            item.toLowerCase().includes(query)
+          );
 
-              if (query === "") {
-                  resultsList.classList.remove("show");
-                  return;
-              }
+          if (filteredItems.length > 0) {
+            resultsList.classList.add("show");
+            const regex = new RegExp(query, "gi");
 
-              const filteredItems = items.filter(item => item.toLowerCase().includes(query));
+            filteredItems.forEach((item) => {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = "#"; // Change to actual URL for the result item
 
-              if (filteredItems.length > 0) {
-                  resultsList.classList.add("show");
-                  const regex = new RegExp(query, 'gi');
+              const highlightedText = item.replace(
+                regex,
+                (match) => `<strong>${match}</strong>`
+              );
+              a.innerHTML = highlightedText;
 
-                  filteredItems.forEach(item => {
-                      const li = document.createElement("li");
-                      const a = document.createElement("a");
-                      a.href = "#"; // Change to actual URL for the result item
-                      
-                      const highlightedText = item.replace(regex, match => `<strong>${match}</strong>`);
-                      a.innerHTML = highlightedText;
-                      
-                      li.appendChild(a);
-                      resultsList.appendChild(li);
-                  });
-              } else {
-                  resultsList.classList.remove("show");
-              }
-          });
+              li.appendChild(a);
+              resultsList.appendChild(li);
+            });
+          } else {
+            resultsList.classList.remove("show");
+          }
+        });
 
-          // Hide results when clicking anywhere else on the page
-          document.addEventListener('click', function(event) {
-              if (!component.contains(event.target)) {
-                  resultsList.classList.remove('show');
-              }
-          });
+        // Hide results when clicking anywhere else on the page
+        document.addEventListener("click", function (event) {
+          if (!component.contains(event.target)) {
+            resultsList.classList.remove("show");
+          }
+        });
       };
 
-      document.querySelectorAll('.search-component').forEach(initializeSearchComponent);
-
+      document
+        .querySelectorAll(".search-component")
+        .forEach(initializeSearchComponent);
 
       document.addEventListener("DOMContentLoaded", () => {
-        const searchModal = document.getElementById('searchModal');
-        const openBtn = document.getElementById('openSearchModalBtn');
-        const closeBtn = searchModal.querySelector('.search-modal-close');
-        const modalInput = document.getElementById('modalSearchInput');
-        const modalResults = document.getElementById('modalResultsList');
+        const searchModal = document.getElementById("searchModal");
+        const openBtn = document.getElementById("openSearchModalBtn");
+        const closeBtn = searchModal.querySelector(".search-modal-close");
+        const modalInput = document.getElementById("modalSearchInput");
+        const modalResults = document.getElementById("modalResultsList");
 
         // Data for search
-        const itemsToSearch = ["علي", "عمر", "أحمد", "محمد", "هشام", "محمود", "عبدالقدوس الأنصارى", "مجلة المنهل", "السيرة الذاتية", "حكاية الصورة"];
+        const itemsToSearch = [
+          "علي",
+          "عمر",
+          "أحمد",
+          "محمد",
+          "هشام",
+          "محمود",
+          "عبدالقدوس الأنصارى",
+          "مجلة المنهل",
+          "السيرة الذاتية",
+          "حكاية الصورة",
+        ];
 
         function openModal() {
-            searchModal.classList.add('show');
-            // Give a slight delay for the CSS transition before focusing
-            setTimeout(() => modalInput.focus(), 300); 
+          searchModal.classList.add("show");
+          // Give a slight delay for the CSS transition before focusing
+          setTimeout(() => modalInput.focus(), 300);
         }
 
         function closeModal() {
-            searchModal.classList.remove('show');
-            modalInput.value = ''; // Clear input on close
-            modalResults.innerHTML = ''; // Clear results on close
+          searchModal.classList.remove("show");
+          modalInput.value = ""; // Clear input on close
+          modalResults.innerHTML = ""; // Clear results on close
         }
 
         // --- Event Listeners ---
-        openBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          openModal();
         });
 
-        closeBtn.addEventListener('click', closeModal);
+        closeBtn.addEventListener("click", closeModal);
 
         // Close modal if user clicks on the background overlay
-        searchModal.addEventListener('click', (e) => {
-            if (e.target === searchModal) {
-                closeModal();
-            }
+        searchModal.addEventListener("click", (e) => {
+          if (e.target === searchModal) {
+            closeModal();
+          }
         });
 
         // Close modal if user presses the 'Escape' key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && searchModal.classList.contains('show')) {
-                closeModal();
-            }
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && searchModal.classList.contains("show")) {
+            closeModal();
+          }
         });
 
         // --- Search Logic inside the Modal ---
-        modalInput.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            modalResults.innerHTML = ''; // Clear previous results
+        modalInput.addEventListener("input", function () {
+          const query = this.value.trim().toLowerCase();
+          modalResults.innerHTML = ""; // Clear previous results
 
-            if (query === "") {
-                return;
-            }
+          if (query === "") {
+            return;
+          }
 
-            const filteredItems = itemsToSearch.filter(item => item.toLowerCase().includes(query));
-            const regex = new RegExp(query, 'gi');
+          const filteredItems = itemsToSearch.filter((item) =>
+            item.toLowerCase().includes(query)
+          );
+          const regex = new RegExp(query, "gi");
 
-            filteredItems.forEach(item => {
-                const li = document.createElement("li");
-                const a = document.createElement("a");
-                a.href = "#"; // Should lead to the actual result page
-                
-                const highlightedText = item.replace(regex, match => `<strong>${match}</strong>`);
-                a.innerHTML = highlightedText;
-                
-                li.appendChild(a);
-                modalResults.appendChild(li);
-            });
+          filteredItems.forEach((item) => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = "#"; // Should lead to the actual result page
+
+            const highlightedText = item.replace(
+              regex,
+              (match) => `<strong>${match}</strong>`
+            );
+            a.innerHTML = highlightedText;
+
+            li.appendChild(a);
+            modalResults.appendChild(li);
+          });
         });
-
       });
-
 
       // --- Back To Top Button ---
       (function () {

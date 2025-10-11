@@ -2581,6 +2581,7 @@ img.pop-img {
     "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
   border-top: 2px solid var(--ft-accent);
   border-top: 2px solid #c27006;
+  font-family: light !important;
 }
 
 /* Overlay so text is always readable (doesn't block clicks) */
@@ -2699,7 +2700,10 @@ img.pop-img {
 }
 .site-footer .ft-copy {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
+  font: 400 16px / 1.75 system-ui, -apple-system, "Segoe UI", Roboto,
+    "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
+  font-family: light !important;
 }
 
 /* Responsive */
@@ -2987,7 +2991,11 @@ img.pop-img {
   margin: 0;
   font-family: light !important;
 }
-
+@media (max-width: 959px) {
+  .family .colored-btn {
+    margin-left: auto !important;
+  }
+}
 @media (max-width: 768px) {
   .logo img {
     height: 300px !important;
@@ -3002,7 +3010,7 @@ img.pop-img {
 }
 @media (max-width: 470px) {
   .logo img {
-    height: 180px !important;
+    height: 200px !important;
   }
   header {
     min-height: 350px !important;
