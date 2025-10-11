@@ -2721,7 +2721,7 @@ img.pop-img {
   }
   .site-footer .ft-bottom {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
   }
   .site-footer .ft-logo img {

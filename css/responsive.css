@@ -58,7 +58,7 @@
   .gallery,
   .icons-div,
   .fixed-size {
-    width: 940px;
+    width: 830px;
   }
   .copy-cont {
     width: 920px;
@@ -141,7 +141,15 @@
   .icons-div,
   .menu-size,
   .fixed-size {
-    width: 830px;
+    width: 720px;
+  }
+  .mix-container {
+    max-width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .vd img {
+    width: 80%;
+    margin: auto;
   }
   .copy-cont {
     width: 785px;
