@@ -2717,7 +2717,7 @@ img.pop-img {
 }
 @media (max-width: 640px) {
   .site-footer {
-    padding: 44px 16px 0;
+    padding: 0 16px 0;
   } /* a bit less top padding on phones */
   .site-footer .ft-container {
     grid-template-columns: 1fr;
@@ -2916,11 +2916,14 @@ img.pop-img {
   overflow: hidden;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
 }
-
+.vd a {
+  height: 100%;
+  width: 100%;
+}
 .vd img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* يملأ الصورة المساحة بشكل جميل */
+  object-fit: cover;
   display: block;
 }
 
@@ -3470,4 +3473,92 @@ footer {
 
 .search-modal .modal-results-list li a strong {
   color: #007bff; /* Highlight color for matched text */
+}
+
+/* === Overlay (dim + blur, not black) === */
+.lb2 {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(22, 23, 24, 0.35); /* soft dim */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+.lb2.is-open {
+  display: flex;
+}
+
+/* === Card === */
+.lb2__card {
+  direction: rtl; /* Arabic-friendly */
+  width: min(560px, 92vw);
+  max-height: 88vh;
+  background: color-mix(in oklab, #fff 92%, #f8fafc);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+/* image */
+.lb2__media {
+  background: #000;
+}
+.lb2__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.lb2__meta {
+  padding: 14px 16px 18px;
+}
+.lb2__author {
+  font-size: 0.95rem;
+  color: #374151;
+  border-bottom: 2px solid #c27006;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+}
+.lb2__author strong {
+  font-weight: 700;
+}
+.lb2__desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* Close button (top-right of the card) */
+.lb2__close {
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 10px;
+  inset-inline-end: 10px; /* works RTL/LTR */
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 32px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  /* transition: background 0.15s ease; */
+}
+/* Small screens: let the image be taller */
+@media (max-width: 640px) {
+  .lb2__img {
+    max-height: 66vh;
+  }
 }
