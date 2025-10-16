@@ -1164,12 +1164,12 @@ footer .footer-content > div:last-child {
 /*start news-page*/
 .page-head header {
   min-height: 102px;
-  border-bottom: 5px solid #a8a86a;
+  border-bottom: 5px solid #da8515;
 }
 .page-head header:before {
   content: "";
   position: absolute;
-  background: #c8c76a;
+  background: #e38914;
   height: 6px;
   width: 100%;
   bottom: -11px;
@@ -1179,13 +1179,13 @@ footer .footer-content > div:last-child {
 .page-head header:after {
   content: "";
   position: absolute;
-  background: #f0f3c6;
+  background: #ef8c0b;
   height: 6px;
   width: 100%;
   bottom: -17px;
   right: 0;
 }
-.page-head .logo {
+/* .page-head .logo {
   position: absolute;
   top: -90px;
   right: 100px;
@@ -1218,6 +1218,9 @@ footer .footer-content > div:last-child {
   z-index: -1;
   border-top: 0;
   border-radius: 0 0 42px 39px;
+} */
+.page-head .logo {
+  display: none;
 }
 
 .soc-head {
@@ -1247,7 +1250,6 @@ footer .footer-content > div:last-child {
 }
 
 .page-head .main-menu {
-  margin-right: 210px;
 }
 
 .page-head .menu-size {
@@ -2692,7 +2694,8 @@ img.pop-img {
 .ft-legal li a {
   font: 400 16px / 1.75 system-ui, -apple-system, "Segoe UI", Roboto,
     "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
-  font-family: light !important;
+  /* font-family: light !important; */
+  font-family: "med";
 }
 .site-footer i:hover {
   transform: scale(1.15);
@@ -2703,7 +2706,8 @@ img.pop-img {
   font-size: 15px;
   font: 400 16px / 1.75 system-ui, -apple-system, "Segoe UI", Roboto,
     "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
-  font-family: light !important;
+  font-family: "med";
+  font-weight: normal !important  ;
 }
 
 /* Responsive */
@@ -3562,3 +3566,28 @@ footer {
     max-height: 66vh;
   }
 }
+
+.cv .about .family p {
+  max-width: 900px !important;
+}
+.cv .about .family {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 900px !important;
+  max-width: 900px;
+}
+.cv .about .family h2 {
+  text-align: center;
+  max-width: 500px;
+}
+/* @media (max-width: 1259px) {
+  .cv .about .family {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 900px !important;
+  }
+} */

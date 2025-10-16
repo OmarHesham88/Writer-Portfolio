@@ -41,7 +41,7 @@ and open the template in the editor.
     </button>
 
     <!-- START  wrapper -->
-    <section class="wrapper">
+    <section class="wrapper page-head">
       <!--start header-->
       <header>
         <div class="small-menu">
@@ -49,10 +49,14 @@ and open the template in the editor.
             <span class="cls"></span>
             <span>
               <ul class="sub-menu">
-                <li class="active"><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="cv.html">السيرة الذاتية</a></li>
-                <li><a href="literary-library.html">المكتبة الأدبية</a></li>
-                <li><a href="images-story.html">حكاية الصورة</a></li>
+                <li>
+                  <a href="literary-library.html">المكتبة الأدبية</a>
+                </li>
+                <li class="active">
+                  <a href="images-story.html">حكاية الصورة</a>
+                </li>
                 <li><a href="videos-library.html">مكتبة الفيديوهات</a></li>
                 <li><a href="sounds.html">صوتيات </a></li>
                 <li>
@@ -65,10 +69,10 @@ and open the template in the editor.
         </div>
         <div class="menu-size">
           <nav class="main-menu">
-            <a class="active" href="index.html">الرئيسية</a>
+            <a href="index.html">الرئيسية</a>
             <a href="cv.html">السيرة الذاتية</a>
             <a href="literary-library.html">المكتبة الأدبية</a>
-            <a href="images-story.html">حكاية الصورة</a>
+            <a class="active" href="images-story.html">حكاية الصورة</a>
             <a href="videos-library.html">مكتبة الفيديوهات</a>
             <a href="sounds.html">صوتيات</a>
 
@@ -79,7 +83,6 @@ and open the template in the editor.
             >
               <div class="search-box">
                 <button type="button"><i class="fas fa-search"></i></button>
-                <!-- CHANGE: id="searchInput" becomes class="search-input" -->
                 <input
                   type="text"
                   class="search-input"
@@ -87,7 +90,6 @@ and open the template in the editor.
                   autocomplete="off"
                 />
               </div>
-              <!-- CHANGE: id="resultsList" becomes class="results-list" -->
               <ul class="results-list"></ul>
             </div>
           </nav>
@@ -97,281 +99,12 @@ and open the template in the editor.
           </div>
         </div>
       </header>
-      <!-- ... (The rest of your page content remains unchanged) ... -->
       <div class="layout">
-        <!--start about-->
-        <h2 class="decor-title" style="margin-top: 40px">السيرة الذاتية</h2>
-        <div class="about">
-          <div class="img-wrapper">
-            <img src="images/side.png" class="main-img" />
-            <img src="images/logo.png" class="overlay-img" />
-          </div>
-          <div class="family">
-            <h2>
-              <span>الأديب، و الكاتب</span>
-              <span
-                class="highlight about-name-part"
-                style="
-                  margin-top: 10px;
-                  text-align: center;
-                  white-space: nowrap;
-                "
-                >عبدالقدوس الأنصارى</span
-              >
-            </h2>
-            <p>
-              السيرة الذاتية" السيرة الذاتية السيرة الذاتية السيرة الذاتية .
-              السيرة الذاتية السيرة الذاتية السيرة الذاتية . السيرة الذاتية
-              السيرة الذاتية السيرة الذاتية . السيرة الذاتية السيرة الذاتية
-              السيرة الذاتية .
-            </p>
-            <a href="" class="colored-btn btn">شاهد المزيد</a>
-          </div>
-        </div>
-
-        <!--end about-->
-
-        <!-- SECTION 1 -->
-
-        <section class="gallery-section" id="gallery-a">
-          <h2 class="decor-title">المكتبة الأدبية</h2>
-          <div class="tab">
-            <button class="filter" data-filter=".category-d">
-              مجلة المنهل
-            </button>
-            <button class="filter" data-filter=".category-e">كتب</button>
-            <button class="filter" data-filter=".category-f">قصائد</button>
-          </div>
-
-          <!--end media-show-->
-
-          <div class="mix-container fixed-size">
-            <div
-              class="fixed-size category-d mix"
-              href="images/book.png"
-              data-thumbnail="images/book.png"
-              data-group="set-gallery-a"
-              title="اسم الصوره"
-            >
-              <ul id="book-list" class="book-grid">
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/1.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/2.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/3.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/4.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div
-              class="fixed-size category-e mix"
-              href="images/book.png"
-              data-thumbnail="images/book.png"
-              data-group="set-gallery-a"
-              title="اسم الصوره"
-            >
-              <ul id="book-list" class="book-grid">
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/1.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/2.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/3.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="book-card">
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/4.jpg')"
-                  ></div>
-
-                  <h4 class="book-title">مجلة المنهل</h4>
-
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>تاريخ الإصدار:</span><br />
-                      30 يناير 2017
-                    </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <a href="" class="colored-btn btn">عرض المزيد</a>
-        </section>
-
-        <!-- SECTION 2 -->
-        <section class="gallery-section" id="gallery-b">
+        <section
+          class="gallery-section"
+          id="gallery-b"
+          style="min-height: 80vh"
+        >
           <h2 class="decor-title">الاستوديو</h2>
           <div class="tab">
             <button class="filter" data-filter=".category-a">
@@ -520,6 +253,70 @@ and open the template in the editor.
                 >
               </a>
             </div>
+            <div class="vd mix category-a">
+              <a
+                href="images/gallery/10.jpg"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-a">
+              <a
+                href="images/gallery/10.jpg"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-a">
+              <a
+                href="images/gallery/10.jpg"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-a">
+              <a
+                href="images/gallery/10.jpg"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
 
             <div class="vd mix category-c">
               <a
@@ -622,6 +419,102 @@ and open the template in the editor.
                 >
               </a>
             </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
+            <div class="vd mix category-b">
+              <a
+                href="images/logo.png"
+                data-thumbnail="images/gallery/7.png"
+                data-group="set-gallery-b"
+                title="عنصر مختلف"
+              >
+                <img src="images/gallery/7.png" alt="عنصر مختلف" />
+                <span class="lb-author" data-role="author" style="display: none"
+                  >متحف الصور</span
+                >
+                <span class="lb-desc" data-role="desc" style="display: none"
+                  >عنصر مختلف</span
+                >
+              </a>
+            </div>
 
             <div class="vd mix category-b">
               <a
@@ -640,8 +533,6 @@ and open the template in the editor.
               </a>
             </div>
           </div>
-
-          <a href="" class="colored-btn btn">عرض المزيد</a>
         </section>
       </div>
       <!-- ... footer ... -->
@@ -884,17 +775,15 @@ and open the template in the editor.
 
         function openModal() {
           searchModal.classList.add("show");
-          // Give a slight delay for the CSS transition before focusing
           setTimeout(() => modalInput.focus(), 300);
         }
 
         function closeModal() {
           searchModal.classList.remove("show");
-          modalInput.value = ""; // Clear input on close
-          modalResults.innerHTML = ""; // Clear results on close
+          modalInput.value = "";
+          modalResults.innerHTML = "";
         }
 
-        // --- Event Listeners ---
         openBtn.addEventListener("click", (e) => {
           e.preventDefault();
           openModal();
@@ -902,24 +791,21 @@ and open the template in the editor.
 
         closeBtn.addEventListener("click", closeModal);
 
-        // Close modal if user clicks on the background overlay
         searchModal.addEventListener("click", (e) => {
           if (e.target === searchModal) {
             closeModal();
           }
         });
 
-        // Close modal if user presses the 'Escape' key
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && searchModal.classList.contains("show")) {
             closeModal();
           }
         });
 
-        // --- Search Logic inside the Modal ---
         modalInput.addEventListener("input", function () {
           const query = this.value.trim().toLowerCase();
-          modalResults.innerHTML = ""; // Clear previous results
+          modalResults.innerHTML = "";
 
           if (query === "") {
             return;
@@ -933,7 +819,7 @@ and open the template in the editor.
           filteredItems.forEach((item) => {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.href = "#"; // Should lead to the actual result page
+            a.href = "#";
 
             const highlightedText = item.replace(
               regex,
@@ -953,10 +839,9 @@ and open the template in the editor.
         if (!btn) return;
 
         const fg = btn.querySelector(".ring .fg");
-        const R = 20; // matches r in SVG
+        const R = 20;
         const CIRC = 2 * Math.PI * R;
 
-        // initialize circle dash
         fg.style.strokeDasharray = String(CIRC);
         fg.style.strokeDashoffset = String(CIRC);
 
@@ -993,137 +878,6 @@ and open the template in the editor.
           false
         );
       })();
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Build the overlay/card once (UI text lives in HTML; JS just reads it)
-        const lb = document.createElement("div");
-        lb.className = "lb2";
-        lb.setAttribute("aria-hidden", "true");
-        lb.innerHTML = `
-    <div class="lb2__card" role="dialog" aria-modal="true">
-      <button class="lb2__close" aria-label="إغلاق">×</button>
-      <div class="lb2__media">
-        <img class="lb2__img" alt="">
-      </div>
-      <div class="lb2__meta">
-        <div class="lb2__author">تم النشر بواسطة <strong></strong></div>
-        <div class="lb2__desc"></div>
-      </div>
-    </div>
-  `;
-        document.body.appendChild(lb);
-
-        const imgEl = lb.querySelector(".lb2__img");
-        const authorEl = lb.querySelector(".lb2__author strong");
-        const descEl = lb.querySelector(".lb2__desc");
-        const closeBtn = lb.querySelector(".lb2__close");
-
-        function openLB({ src, alt, author, desc }) {
-          imgEl.src = src || "";
-          imgEl.alt = alt || "";
-          authorEl.textContent = author || "مجهول";
-          descEl.textContent = desc || "";
-          lb.classList.add("is-open");
-          lb.setAttribute("aria-hidden", "false");
-          document.documentElement.style.overflow = "hidden";
-          closeBtn.focus();
-        }
-
-        function closeLB() {
-          lb.classList.remove("is-open");
-          lb.setAttribute("aria-hidden", "true");
-          document.documentElement.style.overflow = "";
-          imgEl.removeAttribute("src");
-        }
-
-        // Close: click outside card, on X, or Escape
-        lb.addEventListener("click", (e) => {
-          if (e.target === lb) closeLB();
-        });
-        closeBtn.addEventListener("click", closeLB);
-        document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") closeLB();
-        });
-
-        // Helper: get author/desc from HTML (inside the clicked block)
-        function getMetaFromHtml(anchor) {
-          // Prefer elements INSIDE the anchor
-          let authorNode = anchor.querySelector(
-            '[data-role="author"], .lb-author, .author'
-          );
-          let descNode = anchor.querySelector(
-            '[data-role="desc"], .lb-desc, .desc'
-          );
-
-          // If not inside <a>, try within the closest .vd container
-          if (!authorNode || !descNode) {
-            const container = anchor.closest(".vd") || anchor.parentElement;
-            if (!authorNode) {
-              authorNode =
-                container?.querySelector(
-                  '[data-role="author"], .lb-author, .author'
-                ) || null;
-            }
-            if (!descNode) {
-              descNode =
-                container?.querySelector(
-                  '[data-role="desc"], .lb-desc, .desc'
-                ) || null;
-            }
-          }
-
-          const author = authorNode?.textContent?.trim();
-          const desc = descNode?.textContent?.trim();
-
-          // Fallbacks (still only from HTML attributes if present)
-          const authorFallback = anchor.getAttribute("data-author");
-          const descFallback =
-            anchor.getAttribute("data-desc") || anchor.getAttribute("title");
-
-          return {
-            author: author || authorFallback || "مجهول",
-            desc: desc || descFallback || "",
-          };
-        }
-
-        // Open on clicking any gallery image link
-        document
-          .querySelectorAll(".gallery-section .mix-container a")
-          .forEach((a) => {
-            a.addEventListener("click", function (e) {
-              e.preventDefault();
-
-              const href = this.getAttribute("href") || "";
-              const img = this.querySelector("img");
-              const src = /\.(png|jpe?g|webp|gif|avif|svg)(\?.*)?$/i.test(href)
-                ? href
-                : img
-                ? img.getAttribute("src")
-                : "";
-              const alt = img ? img.getAttribute("alt") || "" : "";
-
-              const meta = getMetaFromHtml(this);
-
-              if (src)
-                openLB({ src, alt, author: meta.author, desc: meta.desc });
-            });
-          });
-      });
-
-      // Detect when .overlay-img enters the viewport
-      window.addEventListener("scroll", function () {
-        const elements = document.querySelectorAll(".overlay-img");
-
-        elements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          const inView = rect.top < window.innerHeight && rect.bottom > 0;
-          if (inView) {
-            el.style.opacity = "1";
-          }
-        });
-      });
     </script>
   </body>
 </html>
