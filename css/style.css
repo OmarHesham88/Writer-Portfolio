@@ -570,6 +570,13 @@ button {
   margin-bottom: 20px;
   line-height: 30px;
 }
+.about.smaller-version .family {
+  max-width: 1100px !important;
+}
+.about.smaller-version .family p {
+  max-width: unset !important;
+  font-size: 20px;
+}
 
 .img-wrapper {
   position: relative;
@@ -1222,6 +1229,23 @@ footer .footer-content > div:last-child {
 .page-head .logo {
   display: none;
 }
+@media (max-width: 470px) {
+  .page-head .logo {
+    display: block;
+    width: 320px;
+  }
+  .page-head .menu-size {
+    max-width: 320px;
+  }
+  .page-head .logo img {
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 115px;
+    height: auto !important;
+    width: 250px !important;
+    transform: translateX(-10px);
+  }
+}
 
 .soc-head {
   position: absolute;
@@ -1260,7 +1284,7 @@ footer .footer-content > div:last-child {
   margin-bottom: 20px;
 }
 
-.pagination {
+/* .pagination {
   display: block;
   clear: both;
   margin-bottom: 74px;
@@ -1270,7 +1294,7 @@ footer .footer-content > div:last-child {
 
 .pagination li {
   float: none;
-}
+} */
 
 .holder_pager a {
   display: inline-block;
@@ -1705,9 +1729,9 @@ a.jp-current:hover,
   bottom: 12px !important;
 }
 
-.gall-div .pagination {
+/* .gall-div .pagination {
   margin-top: 20px;
-}
+} */
 .gall-div #share-vd {
   display: none;
   z-index: 99999999;
@@ -2703,11 +2727,8 @@ img.pop-img {
 }
 .site-footer .ft-copy {
   margin: 0;
-  font-size: 15px;
-  font: 400 16px / 1.75 system-ui, -apple-system, "Segoe UI", Roboto,
-    "Noto Kufi Arabic", "Noto Naskh Arabic", Arial, sans-serif;
+  font-size: 14px;
   font-family: "med";
-  font-weight: normal !important  ;
 }
 
 /* Responsive */
@@ -2929,6 +2950,10 @@ img.pop-img {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition-duration: 0.5s;
+}
+.vd img:hover {
+  transform: scale(1.1);
 }
 
 .vd a span {
@@ -3023,7 +3048,7 @@ img.pop-img {
     height: 200px !important;
   }
   header {
-    min-height: 350px !important;
+    min-height: 300px !important;
   }
 }
 
@@ -3057,7 +3082,7 @@ img.pop-img {
   font-size: 1rem;
   font-weight: 700;
   color: white;
-  background-color: #000;
+  /* background-color: #000; */
   line-height: 1.5;
   position: relative;
 }
@@ -3092,13 +3117,20 @@ img.pop-img {
 }
 
 /* date */
+.category-f .book-date {
+  width: auto;
+  text-align: start;
+}
 .book-date {
   font-size: 0.9rem;
   color: white;
+  width: 90px;
+  text-align: center;
+  white-space: nowrap;
 }
 .book-date span {
   opacity: 0.7;
-  margin-inline-start: 6px;
+  margin-inline-end: 20px;
 }
 
 /* download button */
@@ -3591,3 +3623,29 @@ footer {
     max-width: 900px !important;
   }
 } */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+  background: #666;
+}
+
+.pagination button.active {
+  background: #d4a017; /* highlight current page */
+  color: #000;
+}
