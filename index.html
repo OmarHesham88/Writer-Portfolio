@@ -24,7 +24,7 @@ and open the template in the editor.
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
   </head>
 
-  <body>
+  <>
     <button
       id="backToTop"
       class="back-to-top"
@@ -154,108 +154,84 @@ and open the template in the editor.
               title="اسم الصوره"
             >
               <ul id="book-list" class="book-grid">
-                <li class="book-card">
+                <li
+                  class="book-card"
+                  onclick="showPopup('images/gallery/1.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
+                >
                   <div
                     class="book-img"
                     style="background-image: url('images/gallery/1.jpg')"
                   ></div>
-
                   <h4 class="book-title">مجلة المنهل</h4>
-
                   <div class="book-meta">
                     <time class="book-date" datetime="2017-01-30">
                       <span>التاريخ</span><br />
                       30 يناير 2017
                     </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
                   </div>
                 </li>
-                <li class="book-card">
+                <li
+                  class="book-card"
+                  onclick="showPopup('images/gallery/2.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
+                >
                   <div
                     class="book-img"
                     style="background-image: url('images/gallery/2.jpg')"
                   ></div>
-
                   <h4 class="book-title">مجلة المنهل</h4>
-
                   <div class="book-meta">
                     <time class="book-date" datetime="2017-01-30">
                       <span>التاريخ</span><br />
                       30 يناير 2017
                     </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
                   </div>
                 </li>
-                <li class="book-card">
+                <li
+                  class="book-card"
+                  onclick="showPopup('images/gallery/3.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
+                >
                   <div
                     class="book-img"
                     style="background-image: url('images/gallery/3.jpg')"
                   ></div>
-
                   <h4 class="book-title">مجلة المنهل</h4>
-
                   <div class="book-meta">
                     <time class="book-date" datetime="2017-01-30">
                       <span>التاريخ</span><br />
                       30 يناير 2017
                     </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
                   </div>
                 </li>
-                <li class="book-card">
+                <li
+                  class="book-card"
+                  onclick="showPopup('images/gallery/4.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
+                >
                   <div
                     class="book-img"
                     style="background-image: url('images/gallery/4.jpg')"
                   ></div>
-
                   <h4 class="book-title">مجلة المنهل</h4>
-
                   <div class="book-meta">
                     <time class="book-date" datetime="2017-01-30">
                       <span>التاريخ</span><br />
                       30 يناير 2017
                     </time>
-
-                    <a
-                      href="images/book.pdf"
-                      class="download-btn"
-                      download
-                      aria-label="تحميل PDF"
-                    >
-                      <i class="fas fa-file-pdf"></i>
-                      <span>تحميل</span>
-                    </a>
                   </div>
                 </li>
               </ul>
             </div>
+
+            <!-- Popup Modal -->
+            <div id="popup-modal" class="popup-modal">
+              <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <div class="popup-image" id="popup-image"></div>
+                <h4 id="popup-title">عنوان الكتاب</h4>
+                <p id="popup-details">تفاصيل تفاصيل تفاصيل تفاصيل تفاصيل</p>
+                <p id="popup-date">التاريخ</p>
+              </div>
+            </div>
+
             <div
               class="fixed-size category-d mix"
               href="images/book.png"
@@ -631,123 +607,161 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-c">
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+<div class="vd mix category-c">
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
+    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
+      <span class="audio-title">عنصر مختلف</span>
+    </div>
+    <audio class="audio-player" controls>
+      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </a>
+</div>
+
+
+            <div class="vd mix category-b">
               <a
-                href="images/gallery/7.png"
-                data-thumbnail="images/gallery/7.png"
+                href="https://www.youtube.com/embed/VIDEO_ID_1"
                 data-group="set-gallery-b"
+                class="video-link"
                 title="عنصر مختلف"
               >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
+                <div
+                  class="video-thumbnail"
+                  style="background-image: url('images/gallery/7.png')"
                 >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
+                  <span class="play-icon">&#9654;</span>
+                </div>
+                <span class="lb-author" style="display: none">متحف الصور</span>
+                <span class="lb-desc" style="display: none">عنصر مختلف</span>
               </a>
             </div>
 
             <div class="vd mix category-b">
               <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
+                href="https://www.youtube.com/embed/VIDEO_ID_2"
                 data-group="set-gallery-b"
+                class="video-link"
                 title="عنصر مختلف"
               >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
+                <div
+                  class="video-thumbnail"
+                  style="background-image: url('images/gallery/7.png')"
                 >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
+                  <span class="play-icon">&#9654;</span>
+                </div>
+                <span class="lb-author" style="display: none">متحف الصور</span>
+                <span class="lb-desc" style="display: none">عنصر مختلف</span>
               </a>
             </div>
 
             <div class="vd mix category-b">
               <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
+                href="https://www.youtube.com/embed/VIDEO_ID_3"
                 data-group="set-gallery-b"
+                class="video-link"
                 title="عنصر مختلف"
               >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
+                <div
+                  class="video-thumbnail"
+                  style="background-image: url('images/gallery/7.png')"
                 >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
+                  <span class="play-icon">&#9654;</span>
+                </div>
+                <span class="lb-author" style="display: none">متحف الصور</span>
+                <span class="lb-desc" style="display: none">عنصر مختلف</span>
               </a>
             </div>
 
             <div class="vd mix category-b">
               <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
+                href="https://www.youtube.com/embed/VIDEO_ID_4"
                 data-group="set-gallery-b"
+                class="video-link"
                 title="عنصر مختلف"
               >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
+                <div
+                  class="video-thumbnail"
+                  style="background-image: url('images/gallery/7.png')"
                 >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
+                  <span class="play-icon">&#9654;</span>
+                </div>
+                <span class="lb-author" style="display: none">متحف الصور</span>
+                <span class="lb-desc" style="display: none">عنصر مختلف</span>
               </a>
             </div>
 
-            <div class="vd mix category-b">
-              <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
+            <!-- Popup Modal for YouTube Video -->
+            <div id="video-popup-modal" class="video-popup-modal">
+              <div class="video-popup-content">
+                <span class="popup-close vid-close" onclick="closeVideoPopup()"
+                  >&times;</span
                 >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-
-            <div class="vd mix category-b">
-              <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.png" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-
-            <div class="vd mix category-b">
-              <a
-                href="images/logo.png"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.png" alt="نص تجريبى" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
+                <iframe
+                  id="video-frame"
+                  width="560"
+                  height="315"
+                  src=""
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
 
@@ -844,7 +858,6 @@ and open the template in the editor.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5lightbox/7.8/html5lightbox.min.js"></script>
 
     <script>
-      // Mixitup Gallery Filter
       document.querySelectorAll(".gallery-section").forEach((section) => {
         const container = section.querySelector(".mix-container");
         const mixer = mixitup(container, {
@@ -871,7 +884,6 @@ and open the template in the editor.
         }
       });
 
-      // Desktop Search Bar Toggle
       document.addEventListener("DOMContentLoaded", () => {
         const headerNav = document.querySelector("header nav");
 
@@ -879,7 +891,6 @@ and open the template in the editor.
           const btn = box.querySelector("button");
           const input = box.querySelector("input");
 
-          // click on button OR box
           [btn, box].forEach((el) => {
             el.addEventListener("click", (e) => {
               e.preventDefault();
@@ -888,7 +899,6 @@ and open the template in the editor.
               box.classList.toggle("active");
               console.log(box.classList.contains("active"));
 
-              // move nav when active
               if (box.classList.contains("active")) {
                 input.focus();
                 headerNav.style.transform = "translateX(0)";
@@ -901,12 +911,10 @@ and open the template in the editor.
         });
       });
 
-      // --- Improved Live Search Logic ---
       const initializeSearchComponent = (component) => {
         const searchInput = component.querySelector(".search-input");
         const resultsList = component.querySelector(".results-list");
 
-        // Hardcoded items to search. In a real app, this would come from a server.
         const items = [
           "علي",
           "عمر",
@@ -918,14 +926,13 @@ and open the template in the editor.
           "مجلة المنهل",
         ];
 
-        // Make sure we found the necessary elements before proceeding
         if (!searchInput || !resultsList) {
           return;
         }
 
         searchInput.addEventListener("input", function () {
           const query = this.value.trim().toLowerCase();
-          resultsList.innerHTML = ""; // Clear previous results
+          resultsList.innerHTML = ""; 
 
           if (query === "") {
             resultsList.classList.remove("show");
@@ -943,7 +950,7 @@ and open the template in the editor.
             filteredItems.forEach((item) => {
               const li = document.createElement("li");
               const a = document.createElement("a");
-              a.href = "#"; // Change to actual URL for the result item
+              a.href = "#"; 
 
               const highlightedText = item.replace(
                 regex,
@@ -959,7 +966,6 @@ and open the template in the editor.
           }
         });
 
-        // Hide results when clicking anywhere else on the page
         document.addEventListener("click", function (event) {
           if (!component.contains(event.target)) {
             resultsList.classList.remove("show");
@@ -978,7 +984,6 @@ and open the template in the editor.
         const modalInput = document.getElementById("modalSearchInput");
         const modalResults = document.getElementById("modalResultsList");
 
-        // Data for search
         const itemsToSearch = [
           "علي",
           "عمر",
@@ -994,17 +999,15 @@ and open the template in the editor.
 
         function openModal() {
           searchModal.classList.add("show");
-          // Give a slight delay for the CSS transition before focusing
           setTimeout(() => modalInput.focus(), 300);
         }
 
         function closeModal() {
           searchModal.classList.remove("show");
-          modalInput.value = ""; // Clear input on close
-          modalResults.innerHTML = ""; // Clear results on close
+          modalInput.value = "";
+          modalResults.innerHTML = ""; 
         }
 
-        // --- Event Listeners ---
         openBtn.addEventListener("click", (e) => {
           e.preventDefault();
           openModal();
@@ -1012,24 +1015,21 @@ and open the template in the editor.
 
         closeBtn.addEventListener("click", closeModal);
 
-        // Close modal if user clicks on the background overlay
         searchModal.addEventListener("click", (e) => {
           if (e.target === searchModal) {
             closeModal();
           }
         });
 
-        // Close modal if user presses the 'Escape' key
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape" && searchModal.classList.contains("show")) {
             closeModal();
           }
         });
 
-        // --- Search Logic inside the Modal ---
         modalInput.addEventListener("input", function () {
           const query = this.value.trim().toLowerCase();
-          modalResults.innerHTML = ""; // Clear previous results
+          modalResults.innerHTML = ""; 
 
           if (query === "") {
             return;
@@ -1043,7 +1043,7 @@ and open the template in the editor.
           filteredItems.forEach((item) => {
             const li = document.createElement("li");
             const a = document.createElement("a");
-            a.href = "#"; // Should lead to the actual result page
+            a.href = "#"; 
 
             const highlightedText = item.replace(
               regex,
@@ -1066,7 +1066,6 @@ and open the template in the editor.
         const R = 20; // matches r in SVG
         const CIRC = 2 * Math.PI * R;
 
-        // initialize circle dash
         fg.style.strokeDasharray = String(CIRC);
         fg.style.strokeDashoffset = String(CIRC);
 
@@ -1107,7 +1106,6 @@ and open the template in the editor.
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Build the overlay/card once (UI text lives in HTML; JS just reads it)
         const lb = document.createElement("div");
         lb.className = "lb2";
         lb.setAttribute("aria-hidden", "true");
@@ -1148,7 +1146,6 @@ and open the template in the editor.
           imgEl.removeAttribute("src");
         }
 
-        // Close: click outside card, on X, or Escape
         lb.addEventListener("click", (e) => {
           if (e.target === lb) closeLB();
         });
@@ -1157,9 +1154,7 @@ and open the template in the editor.
           if (e.key === "Escape") closeLB();
         });
 
-        // Helper: get author/desc from HTML (inside the clicked block)
         function getMetaFromHtml(anchor) {
-          // Prefer elements INSIDE the anchor
           let authorNode = anchor.querySelector(
             '[data-role="author"], .lb-author, .author'
           );
@@ -1167,7 +1162,6 @@ and open the template in the editor.
             '[data-role="desc"], .lb-desc, .desc'
           );
 
-          // If not inside <a>, try within the closest .vd container
           if (!authorNode || !descNode) {
             const container = anchor.closest(".vd") || anchor.parentElement;
             if (!authorNode) {
@@ -1221,8 +1215,6 @@ and open the template in the editor.
             });
           });
       });
-
-      // Detect when .overlay-img enters the viewport
       window.addEventListener("scroll", function () {
         const elements = document.querySelectorAll(".overlay-img");
 
@@ -1234,6 +1226,50 @@ and open the template in the editor.
           }
         });
       });
+    </script>
+    <script>
+// Image Popup Modal
+function showPopup(imageUrl, title, date, description) {
+  document.getElementById("popup-modal").style.display = "flex";
+
+  document.getElementById("popup-image").style.backgroundImage = `url('${imageUrl}')`;
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-details").innerText = description;
+  document.getElementById("popup-date").innerText = `التاريخ: ${date}`;
+}
+
+function closePopup() {
+  document.getElementById("popup-modal").style.display = "none";
+}
+
+document.querySelectorAll(".video-link").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    let videoUrl = item.getAttribute("href");
+    openVideoPopup(videoUrl);
+  });
+});
+
+function openVideoPopup(url) {
+  document.getElementById("video-popup-modal").style.display = "flex";
+  document.getElementById("video-frame").src = url;
+}
+
+function closeVideoPopup() {
+  document.getElementById("video-popup-modal").style.display = "none";
+  document.getElementById("video-frame").src = "";
+}
+
+window.onclick = function (event) {
+  if (event.target == document.getElementById("popup-modal")) {
+    closePopup();
+  }
+
+  if (event.target == document.getElementById("video-popup-modal")) {
+    closeVideoPopup();
+  }
+};
+
     </script>
   </body>
 </html>
