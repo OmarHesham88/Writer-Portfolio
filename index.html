@@ -454,6 +454,9 @@ and open the template in the editor.
             </div>
           </div>
           <a href="literary-library.html" class="colored-btn btn">عرض المزيد</a>
+          <a class="show-more" data-tab="category-d">عرض المزيد</a>
+
+
         </section>
 
         <!-- SECTION 2 -->
@@ -608,71 +611,65 @@ and open the template in the editor.
             </div>
 
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-1.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 1</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-1.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-2.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 2</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-2.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-3.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 3</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-3.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-4.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 4</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-4.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-5.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 5</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-5.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 <div class="vd mix category-c">
-  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file.mp3" title="عنصر مختلف">
-    <div class="audio-thumbnail" style="background-image: url('images/gallery/7.png');">
-      <span class="audio-title">عنصر مختلف</span>
-    </div>
+  <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-6.mp3" title="عنصر مختلف">
+    <div class="audio-title">الصوتية 6</div>
     <audio class="audio-player" controls>
-      <source src="audio/your-audio-file.mp3" type="audio/mp3">
+      <source src="audio/your-audio-file-6.mp3" type="audio/mp3">
       Your browser does not support the audio element.
     </audio>
   </a>
 </div>
+
 
 
             <div class="vd mix category-b">
@@ -765,7 +762,9 @@ and open the template in the editor.
             </div>
           </div>
 
-          <a href="gallery.html" class="colored-btn btn">عرض المزيد</a>
+          <a href="gallery.html" class="colored-btn btn b-button">عرض المزيد</a>
+<a class="show-more" data-tab="category-a">عرض المزيد</a>
+
         </section>
       </div>
       <!-- ... footer ... -->
@@ -858,31 +857,65 @@ and open the template in the editor.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5lightbox/7.8/html5lightbox.min.js"></script>
 
     <script>
-      document.querySelectorAll(".gallery-section").forEach((section) => {
-        const container = section.querySelector(".mix-container");
-        const mixer = mixitup(container, {
-          selectors: { target: ".mix" },
-          controls: { enable: false },
-          animation: { duration: 300 },
-        });
+document.querySelectorAll(".gallery-section").forEach((section) => {
+  const container = section.querySelector(".mix-container");
+  const mixer = mixitup(container, {
+    selectors: { target: ".mix" },
+    controls: { enable: false },
+    animation: { duration: 300 },
+  });
 
-        const buttons = section.querySelectorAll(".tab .filter");
+  const buttons = section.querySelectorAll(".tab .filter");
 
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            section
-              .querySelector(".tab .filter.active")
-              ?.classList.remove("active");
-            btn.classList.add("active");
-            mixer.filter(btn.dataset.filter);
-          });
-        });
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active class from previously active button
+      section.querySelector(".tab .filter.active")?.classList.remove("active");
 
-        if (buttons.length > 0) {
-          buttons[0].classList.add("active");
-          mixer.filter(buttons[0].dataset.filter);
-        }
-      });
+      // Add active class to clicked button
+      btn.classList.add("active");
+
+      // Filter content using MixitUp
+      mixer.filter(btn.dataset.filter);
+
+      // Update the "Show More" button's data-tab attribute based on the active tab
+      const activeTab = btn.dataset.filter;  // Get the filter from the active button
+      const showMoreButton = section.querySelector(".show-more");
+
+      if (showMoreButton) {
+        // Update the href dynamically based on the active tab
+        showMoreButton.setAttribute("href", `${activeTab}.html`);
+        showMoreButton.dataset.tab = activeTab;  // Update data-tab to match active tab
+      }
+    });
+  });
+
+  // Default: activate the first button and filter accordingly
+  if (buttons.length > 0) {
+    const defaultButton = buttons[0];
+    defaultButton.classList.add("active");
+    mixer.filter(defaultButton.dataset.filter);
+
+    // Set the "Show More" button link for the default tab
+    const showMoreButton = section.querySelector(".show-more");
+    if (showMoreButton) {
+      showMoreButton.setAttribute("href", `${defaultButton.dataset.filter}.html`);
+      showMoreButton.dataset.tab = defaultButton.dataset.filter;  // Set data-tab for default
+    }
+  }
+
+  // Add event listener for the "Show more" button
+  const showMoreButton = section.querySelector(".show-more");
+  if (showMoreButton) {
+    showMoreButton.addEventListener("click", () => {
+      // When "Show More" is clicked, navigate to the page corresponding to the active tab
+      const tab = showMoreButton.dataset.tab;
+      window.location.href = `${tab}.html`;
+    });
+  }
+});
+
+
 
       document.addEventListener("DOMContentLoaded", () => {
         const headerNav = document.querySelector("header nav");

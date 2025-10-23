@@ -2930,6 +2930,9 @@ img.pop-img {
   max-width: 900px;
   margin: 0 auto;
 }
+.mix-container .category-c {
+  grid-column: span 2;
+}
 
 .vd {
   aspect-ratio: 1 / 1; /* يجعل كل عنصر مربع بنفس النسبة */
@@ -3722,6 +3725,7 @@ footer {
   background-size: cover;
   background-position: center;
   width: 100%;
+  min-width: 200px;
   height: 200px;
   border-radius: 8px;
   cursor: pointer;
@@ -3810,6 +3814,8 @@ iframe {
   background: rgba(0, 0, 0, 0.6);
   padding: 5px 10px;
   border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .vd .audio-link {
@@ -3828,4 +3834,49 @@ iframe {
 
 .audio-player:focus {
   outline: none;
+}
+
+/* Audio Block Styling */
+.vd .audio-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px; /* Space between each block */
+}
+
+/* Audio Title Styling */
+.audio-title {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; /* Center-align the title */
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Audio Player Styling */
+.audio-player {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block; /* Centers the player */
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player:focus {
+  outline: none;
+}
+.vd.category-c {
+  aspect-ratio: unset;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: unset;
 }

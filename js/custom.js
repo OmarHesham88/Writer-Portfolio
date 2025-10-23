@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = box.querySelector("input");
 
     btn.addEventListener("click", (e) => {
-      e.preventDefault(); // stop form submit
+      e.preventDefault();
       if (input.style.display === "block") {
         input.style.display = "none";
         input.value = "";
