@@ -54,11 +54,11 @@ and open the template in the editor.
                 <li>
                   <a href="literary-library.html">المكتبة الأدبية</a>
                 </li>
-                <li class="active">
+                <li>
                   <a href="images-story.html">حكاية الصورة</a>
                 </li>
                 <li><a href="videos-library.html">مكتبة الفيديوهات</a></li>
-                <li><a href="acoustics.html">صوتيات </a></li>
+                <li class="active"><a href="acoustics.html">صوتيات </a></li>
                 <li>
                   <a href="#" id="openSearchModalBtn"> بحث </a>
                 </li>
@@ -72,9 +72,9 @@ and open the template in the editor.
             <a href="index.html">الرئيسية</a>
             <a href="cv.html">السيرة الذاتية</a>
             <a href="literary-library.html">المكتبة الأدبية</a>
-            <a class="active" href="images-story.html">حكاية الصورة</a>
+            <a href="images-story.html">حكاية الصورة</a>
             <a href="videos-library.html">مكتبة الفيديوهات</a>
-            <a href="acoustics.html">صوتيات</a>
+            <a class="active" href="acoustics.html">صوتيات</a>
 
             <!-- Search Bar -->
             <div
@@ -101,212 +101,322 @@ and open the template in the editor.
       </header>
       <div class="layout">
         <section
-          class="gallery-section paged"
+          class="gallery-section paged2"
           id="gallery-b"
           style="min-height: 80vh"
         >
-          <h2 class="decor-title">حكاية الصور</h2>
+          <h2 class="decor-title">الكتب</h2>
 
           <div class="mix-container">
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/5.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/5.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص نص
-                  نص نص</span
-                >
-              </a>
-            </div>
+            <div
+              class="fixed-size books mix"
+              href="images/book.png"
+              data-thumbnail="images/book.png"
+              data-group="set-gallery-a"
+              title="اسم الصوره"
+            >
+              <ul id="book-list" class="book-grid">
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/6.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/5.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
+                  <h4 class="book-title">مجلة المنهل</h4>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/7.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/6.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >نصصصصص تجريبىىىى</span
-                >
-              </a>
-            </div>
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/9.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/8.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/8.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
+                  <h4 class="book-title">مجلة المنهل</h4>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/9.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/9.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر不同</span
-                >
-              </a>
-            </div>
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/10.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
 
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
-            </div>
-            <div class="vd mix images-story">
-              <a
-                href="images/gallery/10.jpg"
-                data-thumbnail="images/gallery/7.png"
-                data-group="set-gallery-b"
-                title="عنصر مختلف"
-              >
-                <img src="images/gallery/7.jpg" alt="عنصر مختلف" />
-                <span class="lb-author" data-role="author" style="display: none"
-                  >متحف الصور</span
-                >
-                <span class="lb-desc" data-role="desc" style="display: none"
-                  >عنصر مختلف</span
-                >
-              </a>
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/1.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/2.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/3.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="book-card">
+                  <div
+                    class="book-img"
+                    style="background-image: url('images/gallery/4.jpg')"
+                  ></div>
+
+                  <h4 class="book-title">مجلة المنهل</h4>
+
+                  <div class="book-meta">
+                    <time class="book-date" datetime="2017-01-30">
+                      <span>تاريخ الإصدار</span><br />
+                      30 يناير 2017
+                    </time>
+
+                    <a
+                      href="images/book.pdf"
+                      class="download-btn"
+                      download
+                      aria-label="تحميل PDF"
+                    >
+                      <i class="fas fa-file-pdf"></i>
+                      <span>تحميل</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>

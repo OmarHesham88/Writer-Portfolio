@@ -54,7 +54,7 @@ and open the template in the editor.
                 <li><a href="literary-library.html">المكتبة الأدبية</a></li>
                 <li><a href="images-story.html">حكاية الصورة</a></li>
                 <li><a href="videos-library.html">مكتبة الفيديوهات</a></li>
-                <li><a href="sounds.html">صوتيات </a></li>
+                <li><a href="acoustics.html">صوتيات </a></li>
                 <li>
                   <a href="#" id="openSearchModalBtn"> بحث </a>
                 </li>
@@ -70,7 +70,7 @@ and open the template in the editor.
             <a href="literary-library.html">المكتبة الأدبية</a>
             <a href="images-story.html">حكاية الصورة</a>
             <a href="videos-library.html">مكتبة الفيديوهات</a>
-            <a href="sounds.html">صوتيات</a>
+            <a href="acoustics.html">صوتيات</a>
 
             <!-- Search Bar -->
             <div
@@ -136,104 +136,90 @@ and open the template in the editor.
         <section class="gallery-section" id="gallery-a">
           <h2 class="decor-title">المكتبة الأدبية</h2>
           <div class="tab">
-            <button class="filter" data-filter=".category-d">
+            <button class="filter" data-filter=".manhal-magazine">
               مجلة المنهل
             </button>
-            <button class="filter" data-filter=".category-e">كتب</button>
-            <button class="filter" data-filter=".category-f">قصائد</button>
+            <button class="filter" data-filter=".books">كتب</button>
+            <button class="filter" data-filter=".poems">قصائد</button>
           </div>
 
           <!--end media-show-->
 
           <div class="mix-container fixed-size">
             <div
-              class="fixed-size category-f mix"
+              class="fixed-size poems mix"
               href="images/book.png"
               data-thumbnail="images/book.png"
               data-group="set-gallery-a"
               title="اسم الصوره"
             >
               <ul id="book-list" class="book-grid">
-                <li
-                  class="book-card"
-                  onclick="showPopup('images/gallery/1.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
-                >
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/1.jpg')"
-                  ></div>
-                  <h4 class="book-title">مجلة المنهل</h4>
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>التاريخ</span><br />
-                      30 يناير 2017
-                    </time>
-                  </div>
+                <li class="book-card">
+                  <a href="poem.html">
+                    <div
+                      class="book-img"
+                      style="background-image: url('images/gallery/2.jpg')"
+                    ></div>
+                    <h4 class="book-title">مجلة المنهل</h4>
+                    <div class="book-meta">
+                      <time class="book-date" datetime="2017-01-30">
+                        <span>التاريخ</span><br />
+                        30 يناير 2017
+                      </time>
+                    </div>
+                  </a>
                 </li>
-                <li
-                  class="book-card"
-                  onclick="showPopup('images/gallery/2.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
-                >
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/2.jpg')"
-                  ></div>
-                  <h4 class="book-title">مجلة المنهل</h4>
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>التاريخ</span><br />
-                      30 يناير 2017
-                    </time>
-                  </div>
+                <li class="book-card">
+                  <a href="poem.html">
+                    <div
+                      class="book-img"
+                      style="background-image: url('images/gallery/1.jpg')"
+                    ></div>
+                    <h4 class="book-title">مجلة المنهل</h4>
+                    <div class="book-meta">
+                      <time class="book-date" datetime="2017-01-30">
+                        <span>التاريخ</span><br />
+                        30 يناير 2017
+                      </time>
+                    </div>
+                  </a>
                 </li>
-                <li
-                  class="book-card"
-                  onclick="showPopup('images/gallery/3.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
-                >
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/3.jpg')"
-                  ></div>
-                  <h4 class="book-title">مجلة المنهل</h4>
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>التاريخ</span><br />
-                      30 يناير 2017
-                    </time>
-                  </div>
+                <li class="book-card">
+                  <a href="poem.html">
+                    <div
+                      class="book-img"
+                      style="background-image: url('images/gallery/3.jpg')"
+                    ></div>
+                    <h4 class="book-title">مجلة المنهل</h4>
+                    <div class="book-meta">
+                      <time class="book-date" datetime="2017-01-30">
+                        <span>التاريخ</span><br />
+                        30 يناير 2017
+                      </time>
+                    </div>
+                  </a>
                 </li>
-                <li
-                  class="book-card"
-                  onclick="showPopup('images/gallery/4.jpg', 'مجلة المنهل', '30 يناير 2017', 'هذه هي التفاصيل الخاصة بالكتاب. هنا يمكنك وضع وصف إضافي.')"
-                >
-                  <div
-                    class="book-img"
-                    style="background-image: url('images/gallery/4.jpg')"
-                  ></div>
-                  <h4 class="book-title">مجلة المنهل</h4>
-                  <div class="book-meta">
-                    <time class="book-date" datetime="2017-01-30">
-                      <span>التاريخ</span><br />
-                      30 يناير 2017
-                    </time>
-                  </div>
+                <li class="book-card">
+                  <a href="poem.html">
+                    <div
+                      class="book-img"
+                      style="background-image: url('images/gallery/4.jpg')"
+                    ></div>
+                    <h4 class="book-title">مجلة المنهل</h4>
+                    <div class="book-meta">
+                      <time class="book-date" datetime="2017-01-30">
+                        <span>التاريخ</span><br />
+                        30 يناير 2017
+                      </time>
+                    </div>
+                  </a>
                 </li>
+
               </ul>
             </div>
 
-            <!-- Popup Modal -->
-            <div id="popup-modal" class="popup-modal">
-              <div class="popup-content">
-                <span class="popup-close" onclick="closePopup()">&times;</span>
-                <div class="popup-image" id="popup-image"></div>
-                <h4 id="popup-title">عنوان الكتاب</h4>
-                <p id="popup-details">تفاصيل تفاصيل تفاصيل تفاصيل تفاصيل</p>
-                <p id="popup-date">التاريخ</p>
-              </div>
-            </div>
-
             <div
-              class="fixed-size category-d mix"
+              class="fixed-size manhal-magazine mix"
               href="images/book.png"
               data-thumbnail="images/book.png"
               data-group="set-gallery-a"
@@ -343,7 +329,7 @@ and open the template in the editor.
               </ul>
             </div>
             <div
-              class="fixed-size category-e mix"
+              class="fixed-size books mix"
               href="images/book.png"
               data-thumbnail="images/book.png"
               data-group="set-gallery-a"
@@ -453,27 +439,26 @@ and open the template in the editor.
               </ul>
             </div>
           </div>
-          <a href="literary-library.html" class="colored-btn btn">عرض المزيد</a>
-          <a class="show-more" data-tab="category-d">عرض المزيد</a>
+          <a class="show-more colored-btn btn" data-tab="manhal-magazine">عرض المزيد</a>
 
 
         </section>
 
         <!-- SECTION 2 -->
-        <section class="gallery-section" id="gallery-b">
+        <section class="gallery-section section2" id="gallery-b">
           <h2 class="decor-title">الاستوديو</h2>
           <div class="tab">
-            <button class="filter" data-filter=".category-a">
+            <button class="filter" data-filter=".images-story">
               حكاية الصور
             </button>
-            <button class="filter" data-filter=".category-b">
+            <button class="filter" data-filter=".videos-library">
               مكتبة الفيديوهات
             </button>
-            <button class="filter" data-filter=".category-c">الصوتيات</button>
+            <button class="filter" data-filter=".acoustics">الصوتيات</button>
           </div>
 
           <div class="mix-container">
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/5.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -491,7 +476,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/6.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -508,7 +493,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/7.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -525,7 +510,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/9.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -542,7 +527,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/10.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -559,7 +544,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/9.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -576,7 +561,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/10.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -593,7 +578,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-a">
+            <div class="vd mix images-story">
               <a
                 href="images/gallery/10.jpg"
                 data-thumbnail="images/gallery/7.png"
@@ -610,7 +595,7 @@ and open the template in the editor.
               </a>
             </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-1.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 1</div>
     <audio class="audio-player" controls>
@@ -620,7 +605,7 @@ and open the template in the editor.
   </a>
 </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-2.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 2</div>
     <audio class="audio-player" controls>
@@ -630,7 +615,7 @@ and open the template in the editor.
   </a>
 </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-3.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 3</div>
     <audio class="audio-player" controls>
@@ -640,7 +625,7 @@ and open the template in the editor.
   </a>
 </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-4.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 4</div>
     <audio class="audio-player" controls>
@@ -650,7 +635,7 @@ and open the template in the editor.
   </a>
 </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-5.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 5</div>
     <audio class="audio-player" controls>
@@ -660,7 +645,7 @@ and open the template in the editor.
   </a>
 </div>
 
-<div class="vd mix category-c">
+<div class="vd mix acoustics">
   <a href="javascript:void(0);" class="audio-link" data-audio="audio/your-audio-file-6.mp3" title="عنصر مختلف">
     <div class="audio-title">الصوتية 6</div>
     <audio class="audio-player" controls>
@@ -672,7 +657,7 @@ and open the template in the editor.
 
 
 
-            <div class="vd mix category-b">
+            <div class="vd mix videos-library">
               <a
                 href="https://www.youtube.com/embed/VIDEO_ID_1"
                 data-group="set-gallery-b"
@@ -690,7 +675,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-b">
+            <div class="vd mix videos-library">
               <a
                 href="https://www.youtube.com/embed/VIDEO_ID_2"
                 data-group="set-gallery-b"
@@ -708,7 +693,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-b">
+            <div class="vd mix videos-library">
               <a
                 href="https://www.youtube.com/embed/VIDEO_ID_3"
                 data-group="set-gallery-b"
@@ -726,7 +711,7 @@ and open the template in the editor.
               </a>
             </div>
 
-            <div class="vd mix category-b">
+            <div class="vd mix videos-library">
               <a
                 href="https://www.youtube.com/embed/VIDEO_ID_4"
                 data-group="set-gallery-b"
@@ -762,8 +747,8 @@ and open the template in the editor.
             </div>
           </div>
 
-          <a href="gallery.html" class="colored-btn btn b-button">عرض المزيد</a>
-<a class="show-more" data-tab="category-a">عرض المزيد</a>
+          <!-- <a href="gallery.html" class="colored-btn btn b-button">عرض المزيد</a> -->
+<a class="show-more colored-btn btn b-button" data-tab="images-story">عرض المزيد</a>
 
         </section>
       </div>
@@ -869,22 +854,18 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      // Remove active class from previously active button
       section.querySelector(".tab .filter.active")?.classList.remove("active");
 
-      // Add active class to clicked button
       btn.classList.add("active");
 
-      // Filter content using MixitUp
       mixer.filter(btn.dataset.filter);
 
-      // Update the "Show More" button's data-tab attribute based on the active tab
       const activeTab = btn.dataset.filter;  // Get the filter from the active button
       const showMoreButton = section.querySelector(".show-more");
 
       if (showMoreButton) {
-        // Update the href dynamically based on the active tab
-        showMoreButton.setAttribute("href", `${activeTab}.html`);
+        const tabName = activeTab.startsWith('.') ? activeTab.substring(1) : activeTab;  // Remove the dot if it exists
+        showMoreButton.setAttribute("href", `${tabName}.html`);
         showMoreButton.dataset.tab = activeTab;  // Update data-tab to match active tab
       }
     });
@@ -899,7 +880,9 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
     // Set the "Show More" button link for the default tab
     const showMoreButton = section.querySelector(".show-more");
     if (showMoreButton) {
-      showMoreButton.setAttribute("href", `${defaultButton.dataset.filter}.html`);
+      // Ensure no leading dot is added before the file name
+      const defaultTabName = defaultButton.dataset.filter.startsWith('.') ? defaultButton.dataset.filter.substring(1) : defaultButton.dataset.filter;
+      showMoreButton.setAttribute("href", `${defaultTabName}.html`);
       showMoreButton.dataset.tab = defaultButton.dataset.filter;  // Set data-tab for default
     }
   }
@@ -914,6 +897,7 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
     });
   }
 });
+
 
 
 
@@ -1227,7 +1211,7 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
 
         // Open on clicking any gallery image link
         document
-          .querySelectorAll(".gallery-section .mix-container a")
+          .querySelectorAll(".section2 .mix-container a")
           .forEach((a) => {
             a.addEventListener("click", function (e) {
               e.preventDefault();

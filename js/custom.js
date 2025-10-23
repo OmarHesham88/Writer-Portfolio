@@ -16,7 +16,7 @@ $(document).ready(function () {
 $(function () {
   $("#Container").mixItUp({
     load: {
-      filter: ".category-b",
+      filter: ".videos-library",
     },
   });
 });

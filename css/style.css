@@ -533,6 +533,25 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+.poem-page {
+  display: flex;
+  width: 1140px !important;
+  margin-top: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.poem-page .family {
+  margin: auto;
+}
+.poem-page img {
+  width: 635px;
+  margin-left: 25px;
+}
+@media (max-width: 970px) {
+  .poem-page img {
+    width: 420px !important;
+  }
+}
 
 .about img {
   width: 635px;
@@ -570,10 +589,12 @@ button {
   margin-bottom: 20px;
   line-height: 30px;
 }
-.about.smaller-version .family {
+.about.smaller-version .family,
+.poem-page.smaller-version .family {
   max-width: 1100px !important;
 }
-.about.smaller-version .family p {
+.about.smaller-version .family p,
+.poem-page.smaller-version .family p {
   max-width: unset !important;
   font-size: 20px;
 }
@@ -2930,7 +2951,7 @@ img.pop-img {
   max-width: 900px;
   margin: 0 auto;
 }
-.mix-container .category-c {
+.mix-container .acoustics {
   grid-column: span 2;
 }
 
@@ -3018,14 +3039,20 @@ img.pop-img {
   flex-direction: column;
 }
 .book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 20px; /* space between cards */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
   font-family: light !important;
 }
+
+.book-grid .book-card {
+  flex: 1 1 215px;
+  min-width: 215px;
+}
+
 @media (max-width: 959px) {
   .family .colored-btn {
     margin-left: auto !important;
@@ -3064,6 +3091,7 @@ img.pop-img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
+  max-width: 250px;
 }
 .book-card:hover {
   transform: translateY(-4px);
@@ -3120,7 +3148,7 @@ img.pop-img {
 }
 
 /* date */
-.category-f .book-date {
+.poems .book-date {
   width: auto;
   text-align: start;
 }
@@ -3871,7 +3899,7 @@ iframe {
 .audio-player:focus {
   outline: none;
 }
-.vd.category-c {
+.vd.acoustics {
   aspect-ratio: unset;
   flex-direction: column;
   justify-content: space-between;
@@ -3879,4 +3907,163 @@ iframe {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: unset;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+  display: flex; /* Use flexbox to align the buttons */
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Adds space between the buttons */
+  flex-wrap: wrap; /* Ensures that the buttons can wrap if needed but keeps them in one row */
+}
+
+.pagination button {
+  padding: 10px 15px;
+  background-color: #c27006;
+  border: 1px solid #c27006;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Text color */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #9f4300;
+}
+
+.pagination button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(194, 112, 6, 0.7); /* Highlight the button on focus */
+}
+
+.pagination button:not(:disabled):active {
+  background-color: #7e3204; /* Darken when clicked */
+}
+
+/* Poem Detail Section */
+.poem-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.poem-detail .poem-image {
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.poem-detail .poem-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Poem Title */
+.poem-detail .poem-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Poem Description */
+.poem-detail .poem-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 30px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Poem Meta */
+.poem-detail .poem-meta {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.poem-detail .poem-meta span {
+  font-weight: bold;
+}
+
+.poem-detail .poem-meta time {
+  font-style: italic;
+}
+
+/* Poem Actions (Download) */
+.poem-detail .poem-actions {
+  text-align: center;
+}
+
+.poem-detail .poem-actions .download-btn {
+  padding: 12px 20px;
+  background-color: #c27006;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.poem-detail .poem-actions .download-btn:hover {
+  background-color: #9f4300;
+}
+
+.poem-detail .poem-actions .download-btn i {
+  font-size: 1.5rem;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #c27006;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .poem-detail {
+    padding: 20px;
+  }
+
+  .poem-detail .poem-title {
+    font-size: 1.8rem;
+  }
+
+  .poem-detail .poem-description {
+    font-size: 1rem;
+  }
+
+  .poem-detail .poem-meta {
+    font-size: 0.9rem;
+  }
+
+  .poem-detail .poem-actions .download-btn {
+    font-size: 1rem;
+  }
+
+  .poem-detail .poem-image {
+    width: 100%;
+  }
 }
