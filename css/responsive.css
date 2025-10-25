@@ -529,6 +529,9 @@
   .fixed-size {
     width: 450px;
   }
+  .poem-detail .poem-image img {
+    max-width: 280px;
+  }
   .about.smaller-version .family p {
     font-size: 18px !important;
   }
@@ -768,8 +771,10 @@
   .news-details a {
     font-size: 13px;
   }
+  .poem-detail .poem-image img {
+    max-width: 240px;
+  }
 }
-
 @media only screen and (max-width: 400px) {
   .vd {
     max-width: 300px;

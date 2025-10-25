@@ -535,7 +535,7 @@ button {
 }
 .poem-page {
   display: flex;
-  width: 1140px !important;
+  /* width: 1140px !important; */
   margin-top: 35px;
   margin-left: auto;
   margin-right: auto;
@@ -3045,6 +3045,7 @@ img.pop-img {
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
   font-family: light !important;
 }
 

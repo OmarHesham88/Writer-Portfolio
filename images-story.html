@@ -417,18 +417,53 @@ and open the template in the editor.
             section
               .querySelector(".tab .filter.active")
               ?.classList.remove("active");
+
             btn.classList.add("active");
+
             mixer.filter(btn.dataset.filter);
+
+            const activeTab = btn.dataset.filter; // Get the filter from the active button
+            const showMoreButton = section.querySelector(".show-more");
+
+            if (showMoreButton) {
+              const tabName = activeTab.startsWith(".")
+                ? activeTab.substring(1)
+                : activeTab; // Remove the dot if it exists
+              showMoreButton.setAttribute("href", `${tabName}.html`);
+              showMoreButton.dataset.tab = activeTab; // Update data-tab to match active tab
+            }
           });
         });
 
+        // Default: activate the first button and filter accordingly
         if (buttons.length > 0) {
-          buttons[0].classList.add("active");
-          mixer.filter(buttons[0].dataset.filter);
+          const defaultButton = buttons[0];
+          defaultButton.classList.add("active");
+          mixer.filter(defaultButton.dataset.filter);
+
+          // Set the "Show More" button link for the default tab
+          const showMoreButton = section.querySelector(".show-more");
+          if (showMoreButton) {
+            // Ensure no leading dot is added before the file name
+            const defaultTabName = defaultButton.dataset.filter.startsWith(".")
+              ? defaultButton.dataset.filter.substring(1)
+              : defaultButton.dataset.filter;
+            showMoreButton.setAttribute("href", `${defaultTabName}.html`);
+            showMoreButton.dataset.tab = defaultButton.dataset.filter; // Set data-tab for default
+          }
+        }
+
+        // Add event listener for the "Show more" button
+        const showMoreButton = section.querySelector(".show-more");
+        if (showMoreButton) {
+          showMoreButton.addEventListener("click", () => {
+            // When "Show More" is clicked, navigate to the page corresponding to the active tab
+            const tab = showMoreButton.dataset.tab;
+            window.location.href = `${tab}.html`;
+          });
         }
       });
 
-      // Desktop Search Bar Toggle
       document.addEventListener("DOMContentLoaded", () => {
         const headerNav = document.querySelector("header nav");
 
@@ -436,7 +471,6 @@ and open the template in the editor.
           const btn = box.querySelector("button");
           const input = box.querySelector("input");
 
-          // click on button OR box
           [btn, box].forEach((el) => {
             el.addEventListener("click", (e) => {
               e.preventDefault();
@@ -445,7 +479,6 @@ and open the template in the editor.
               box.classList.toggle("active");
               console.log(box.classList.contains("active"));
 
-              // move nav when active
               if (box.classList.contains("active")) {
                 input.focus();
                 headerNav.style.transform = "translateX(0)";
@@ -458,7 +491,6 @@ and open the template in the editor.
         });
       });
 
-      // --- Improved Live Search Logic ---
       const initializeSearchComponent = (component) => {
         const searchInput = component.querySelector(".search-input");
         const resultsList = component.querySelector(".results-list");
@@ -532,7 +564,6 @@ and open the template in the editor.
         const modalInput = document.getElementById("modalSearchInput");
         const modalResults = document.getElementById("modalResultsList");
 
-        // Data for search
         const itemsToSearch = [
           "علي",
           "عمر",
@@ -612,7 +643,7 @@ and open the template in the editor.
         if (!btn) return;
 
         const fg = btn.querySelector(".ring .fg");
-        const R = 20;
+        const R = 20; // matches r in SVG
         const CIRC = 2 * Math.PI * R;
 
         fg.style.strokeDasharray = String(CIRC);
@@ -651,6 +682,172 @@ and open the template in the editor.
           false
         );
       })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lb = document.createElement("div");
+        lb.className = "lb2";
+        lb.setAttribute("aria-hidden", "true");
+        lb.innerHTML = `
+    <div class="lb2__card" role="dialog" aria-modal="true">
+      <button class="lb2__close" aria-label="إغلاق">×</button>
+      <div class="lb2__media">
+        <img class="lb2__img" alt="">
+      </div>
+      <div class="lb2__meta">
+        <div class="lb2__author">تم النشر بواسطة <strong></strong></div>
+        <div class="lb2__desc"></div>
+      </div>
+    </div>
+  `;
+        document.body.appendChild(lb);
+
+        const imgEl = lb.querySelector(".lb2__img");
+        const authorEl = lb.querySelector(".lb2__author strong");
+        const descEl = lb.querySelector(".lb2__desc");
+        const closeBtn = lb.querySelector(".lb2__close");
+
+        function openLB({ src, alt, author, desc }) {
+          imgEl.src = src || "";
+          imgEl.alt = alt || "";
+          authorEl.textContent = author || "مجهول";
+          descEl.textContent = desc || "";
+          lb.classList.add("is-open");
+          lb.setAttribute("aria-hidden", "false");
+          document.documentElement.style.overflow = "hidden";
+          closeBtn.focus();
+        }
+
+        function closeLB() {
+          lb.classList.remove("is-open");
+          lb.setAttribute("aria-hidden", "true");
+          document.documentElement.style.overflow = "";
+          imgEl.removeAttribute("src");
+        }
+
+        lb.addEventListener("click", (e) => {
+          if (e.target === lb) closeLB();
+        });
+        closeBtn.addEventListener("click", closeLB);
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeLB();
+        });
+
+        function getMetaFromHtml(anchor) {
+          let authorNode = anchor.querySelector(
+            '[data-role="author"], .lb-author, .author'
+          );
+          let descNode = anchor.querySelector(
+            '[data-role="desc"], .lb-desc, .desc'
+          );
+
+          if (!authorNode || !descNode) {
+            const container = anchor.closest(".vd") || anchor.parentElement;
+            if (!authorNode) {
+              authorNode =
+                container?.querySelector(
+                  '[data-role="author"], .lb-author, .author'
+                ) || null;
+            }
+            if (!descNode) {
+              descNode =
+                container?.querySelector(
+                  '[data-role="desc"], .lb-desc, .desc'
+                ) || null;
+            }
+          }
+
+          const author = authorNode?.textContent?.trim();
+          const desc = descNode?.textContent?.trim();
+
+          // Fallbacks (still only from HTML attributes if present)
+          const authorFallback = anchor.getAttribute("data-author");
+          const descFallback =
+            anchor.getAttribute("data-desc") || anchor.getAttribute("title");
+
+          return {
+            author: author || authorFallback || "مجهول",
+            desc: desc || descFallback || "",
+          };
+        }
+
+        // Open on clicking any gallery image link
+        document.querySelectorAll(".section2 .mix-container a").forEach((a) => {
+          a.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const href = this.getAttribute("href") || "";
+            const img = this.querySelector("img");
+            const src = /\.(png|jpe?g|webp|gif|avif|svg)(\?.*)?$/i.test(href)
+              ? href
+              : img
+              ? img.getAttribute("src")
+              : "";
+            const alt = img ? img.getAttribute("alt") || "" : "";
+
+            const meta = getMetaFromHtml(this);
+
+            if (src) openLB({ src, alt, author: meta.author, desc: meta.desc });
+          });
+        });
+      });
+      window.addEventListener("scroll", function () {
+        const elements = document.querySelectorAll(".overlay-img");
+
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight && rect.bottom > 0;
+          if (inView) {
+            el.style.opacity = "1";
+          }
+        });
+      });
+    </script>
+    <script>
+      // Image Popup Modal
+      function showPopup(imageUrl, title, date, description) {
+        document.getElementById("popup-modal").style.display = "flex";
+
+        document.getElementById(
+          "popup-image"
+        ).style.backgroundImage = `url('${imageUrl}')`;
+        document.getElementById("popup-title").innerText = title;
+        document.getElementById("popup-details").innerText = description;
+        document.getElementById("popup-date").innerText = `التاريخ: ${date}`;
+      }
+
+      function closePopup() {
+        document.getElementById("popup-modal").style.display = "none";
+      }
+
+      document.querySelectorAll(".video-link").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          let videoUrl = item.getAttribute("href");
+          openVideoPopup(videoUrl);
+        });
+      });
+
+      function openVideoPopup(url) {
+        document.getElementById("video-popup-modal").style.display = "flex";
+        document.getElementById("video-frame").src = url;
+      }
+
+      function closeVideoPopup() {
+        document.getElementById("video-popup-modal").style.display = "none";
+        document.getElementById("video-frame").src = "";
+      }
+
+      window.onclick = function (event) {
+        if (event.target == document.getElementById("popup-modal")) {
+          closePopup();
+        }
+
+        if (event.target == document.getElementById("video-popup-modal")) {
+          closeVideoPopup();
+        }
+      };
     </script>
   </body>
 </html>
