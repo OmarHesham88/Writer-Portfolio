@@ -59,7 +59,7 @@ and open the template in the editor.
                 </li>
               </ul>
             </span>
-            <span class="cls"></span>
+              <span class="cls"></span>
           </div>
         </div>
         <div class="menu-size">
@@ -870,13 +870,11 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
     });
   });
 
-  // Default: activate the first button and filter accordingly
   if (buttons.length > 0) {
     const defaultButton = buttons[0];
     defaultButton.classList.add("active");
     mixer.filter(defaultButton.dataset.filter);
 
-    // Set the "Show More" button link for the default tab
     const showMoreButton = section.querySelector(".show-more");
     if (showMoreButton) {
       // Ensure no leading dot is added before the file name

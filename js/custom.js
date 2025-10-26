@@ -1,15 +1,35 @@
-$(document).ready(function () {
-  $(document).delegate(".open", "click", function (event) {
-    $(this).addClass("oppenned");
-    event.stopPropagation();
+$(function () {
+  let lastOpenedAt = 0;
+
+  $(document).on("click", ".open", function (e) {
+    const $el = $(this);
+    if (!$el.hasClass("oppenned") && !$el.hasClass("opened")) {
+      $el.addClass("oppenned opened");
+      lastOpenedAt = e.timeStamp || 0;
+    }
   });
-  $(document).delegate("body", "click", function (event) {
-    $(".open").removeClass("oppenned");
-    event.stopPropagation();
-  });
-  $(document).delegate(".cls", "click", function (event) {
-    $(".open").removeClass("oppenned");
-    event.stopPropagation();
+
+  $(document).on("click", function (e) {
+    const $opened = $(".open.oppenned, .open.opened");
+    if (!$opened.length) return;
+
+    if (e.timeStamp && e.timeStamp - lastOpenedAt < 20) return;
+
+    const x = e.clientX,
+      y = e.clientY;
+
+    let hitOpenedArea = false;
+    $opened.each(function () {
+      const r = this.getBoundingClientRect();
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
+        hitOpenedArea = true;
+        return false;
+      }
+    });
+
+    if (hitOpenedArea || $(e.target).closest(".cls").length) {
+      $opened.removeClass("oppenned opened");
+    }
   });
 });
 
