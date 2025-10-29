@@ -471,6 +471,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .logo-foot img {
     height: 113px;
   }
@@ -726,7 +727,18 @@
   .down {
     margin-bottom: 20px;
   }
-
+  .img-wrapper {
+    transform: scale(0.7);
+  }
+  .img-wrapper .main-img {
+    margin-bottom: 10px;
+  }
+  .layout .decor-title-res {
+    margin-bottom: 0px !important;
+  }
+  .layout .about-res {
+    margin-top: 0;
+  }
   .form-sec,
   .pop-det {
     width: 300px;
