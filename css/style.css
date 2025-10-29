@@ -4069,3 +4069,7 @@ footer p {
     width: 100%;
   }
 }
+
+.main-img-res {
+  display: none;
+}

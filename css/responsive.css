@@ -471,6 +471,28 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  /* backk */
+  .about-res .main-img-res {
+    display: block;
+    margin-bottom: 0 !important;
+    width: 260px !important;
+  }
+  .about-res .family p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6;
+    max-height: calc(1.6em * 3);
+  }
+
+  .main-img {
+    display: none;
+  }
+  .about-res .overlay-img {
+    display: none;
+  }
 
   .logo-foot img {
     height: 113px;
@@ -654,6 +676,7 @@
   .copyright .socialmedia a {
     margin: 3px;
   }
+
   .visitor {
     width: 350px;
     font-size: 14px;
@@ -664,6 +687,9 @@
   .about img,
   .family {
     width: 300px;
+  }
+  .about-res .main-img-res {
+    width: 350px !important;
   }
   .icons-div .icon {
     width: 300px;
