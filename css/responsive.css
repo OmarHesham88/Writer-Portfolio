@@ -464,8 +464,12 @@
     min-height: 350px;
   }
 
-  .about img {
+  /* .about img {
     display: none;
+  } */
+  .about {
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .logo-foot img {
     height: 113px;
