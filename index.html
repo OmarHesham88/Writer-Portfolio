@@ -439,7 +439,7 @@ and open the template in the editor.
               </ul>
             </div>
           </div>
-          <a class="show-more colored-btn btn" data-tab="manhal-magazine">عرض المزيد</a>
+          <a class="show-more colored-btn btn" href="literary-library.html">عرض المزيد</a>
 
 
         </section>
@@ -747,8 +747,7 @@ and open the template in the editor.
             </div>
           </div>
 
-          <!-- <a href="gallery.html" class="colored-btn btn b-button">عرض المزيد</a> -->
-<a class="show-more colored-btn btn b-button" data-tab="images-story">عرض المزيد</a>
+<a class="show-more colored-btn btn b-button" href="images-story.html">عرض المزيد</a>
 
         </section>
       </div>
@@ -847,7 +846,7 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
   const mixer = mixitup(container, {
     selectors: { target: ".mix" },
     controls: { enable: false },
-    animation: { duration: 300 },
+    animation: { duration: 400 },
   });
 
   const buttons = section.querySelectorAll(".tab .filter");
@@ -859,15 +858,6 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
       btn.classList.add("active");
 
       mixer.filter(btn.dataset.filter);
-
-      const activeTab = btn.dataset.filter;  // Get the filter from the active button
-      const showMoreButton = section.querySelector(".show-more");
-
-      if (showMoreButton) {
-        const tabName = activeTab.startsWith('.') ? activeTab.substring(1) : activeTab;  // Remove the dot if it exists
-        showMoreButton.setAttribute("href", `${tabName}.html`);
-        showMoreButton.dataset.tab = activeTab;  // Update data-tab to match active tab
-      }
     });
   });
 
@@ -877,22 +867,6 @@ document.querySelectorAll(".gallery-section").forEach((section) => {
     mixer.filter(defaultButton.dataset.filter);
 
     const showMoreButton = section.querySelector(".show-more");
-    if (showMoreButton) {
-      // Ensure no leading dot is added before the file name
-      const defaultTabName = defaultButton.dataset.filter.startsWith('.') ? defaultButton.dataset.filter.substring(1) : defaultButton.dataset.filter;
-      showMoreButton.setAttribute("href", `${defaultTabName}.html`);
-      showMoreButton.dataset.tab = defaultButton.dataset.filter;  // Set data-tab for default
-    }
-  }
-
-  // Add event listener for the "Show more" button
-  const showMoreButton = section.querySelector(".show-more");
-  if (showMoreButton) {
-    showMoreButton.addEventListener("click", () => {
-      // When "Show More" is clicked, navigate to the page corresponding to the active tab
-      const tab = showMoreButton.dataset.tab;
-      window.location.href = `${tab}.html`;
-    });
   }
 });
 
